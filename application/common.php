@@ -155,3 +155,52 @@ function pincheTime($time) {
       }
      return '今天';
 }
+
+/*
+ * 获取微信access_token
+ */
+function getAccessToken(){
+    $access_token = \config('weixin.access_token');
+    if(!empty($access_token)){
+        $expire_time = \config('weixin.expire_time');
+        if($expire_time>time()){
+            return $access_token;
+        }
+    }
+    $access_token = file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.getenv('weixin.appid').'&secret='.getenv('weixin.appsecret'));
+    if(!empty($access_token)){
+        $access_token = json_decode($access_token,true);
+        if(isset($access_token['access_token'])){
+            #将数据放在配置文件
+            file_put_contents(__DIR__.'/../config/weixin.php','<?php
+        return ["access_token"=>"'.$access_token['access_token'].'","expire_time"=>'.(time()+3600).'];');
+            return $access_token['access_token'];
+        }
+    }
+}
+
+/*
+ * 模板消息推送
+ *
+ */
+function templateMsg($openid,$data,$url=''){
+    $uri = 'https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.getAccessToken();
+    $info = [];
+    foreach ($data as $k=>$v){
+        $info[$k] = ['value'=>$v];
+    }
+    $send_data = [
+        'touser' => $openid,
+        'template_id' => 'yoXMhkWepdC0Nx7MSKey49-AxMiMKXJNqp_kQhBCSlU',
+        'url' => $url,
+        'data' => $info
+    ];
+    $res = requestUrl($send_data,$uri,'post');
+//    $data = json_decode($res,true);
+    return $res;
+//        if(isset($data['errcode']) && $data['errcode'] == '0'){
+//            return true;
+//        }else{
+//            return false;
+//        }
+}
