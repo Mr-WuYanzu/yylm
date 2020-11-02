@@ -157,6 +157,20 @@ function pincheTime($time) {
 }
 
 /*
+ * 随机字符串
+ */
+function randStr($n)
+{
+    $characters = '1234567890abcdefghijklmnopqrstuvwxyz';
+    $randomString = '';
+    for ($i = 0; $i < $n; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $randomString .= $characters[$index];
+    }
+    return $randomString;
+}
+
+/*
  * 获取微信access_token
  */
 function getAccessToken(){
