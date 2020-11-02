@@ -1,0 +1,275 @@
+[ 2020-11-02T10:15:18+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/index/index.html
+[ log ] www.yylm.com/otadmins/index/index.html [运行时间：0.046970s][吞吐率：21.29req/s] [内存消耗：2,748.16kb] [文件加载：51]
+[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yylm.com/otadmins/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'www.yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ RUN ] app\otadmins\controller\Index->index[ E:\NewProgram\yylm\application\otadmins\controller\Index.php ]
+[ info ] [ VIEW ] E:\NewProgram\yylm/application/otadmins\view\index.html [ array (
+  0 => 'username',
+  1 => 'portrait',
+  2 => 'rolename',
+  3 => 'menu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011185s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.002666s ]
+[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_config` [ RunTime:0.002365s ]
+[ sql ] [ SQL ] SELECT `type`,`name`,`value` FROM `think_config` WHERE  `status` = 1 [ RunTime:0.000800s ]
+
+---------------------------------------------------------------
+[ 2020-11-02T10:15:18+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/index/indexpage.html
+[ log ] www.yylm.com/otadmins/index/indexpage.html [运行时间：0.077842s][吞吐率：12.85req/s] [内存消耗：2,745.79kb] [文件加载：50]
+[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'index',
+    2 => 'indexpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ RUN ] app\otadmins\controller\Index->indexPage[ E:\NewProgram\yylm\application\otadmins\controller\Index.php ]
+[ info ] [ VIEW ] E:\NewProgram\yylm/application/otadmins\view\index\index.html [ array (
+  0 => 'username',
+  1 => 'portrait',
+  2 => 'rolename',
+  3 => 'menu',
+  4 => 'info',
+  5 => 'article_list',
+  6 => 'log_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011738s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.002324s ]
+[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_article` [ RunTime:0.003117s ]
+[ sql ] [ SQL ] SELECT * FROM `think_article` ORDER BY views desc LIMIT 5 [ RunTime:0.001434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_log` [ RunTime:0.001795s ]
+[ sql ] [ SQL ] SELECT * FROM `think_log` ORDER BY log_id desc LIMIT 10 [ RunTime:0.001472s ]
+
+---------------------------------------------------------------
+[ 2020-11-02T10:15:18+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/js/layer/skin/extend/layer.ext.js,skin/moon/style.css
+[ log ] www.yylm.com/static/admin/js/layer/skin/extend/layer.ext.js,skin/moon/style.css [运行时间：0.007811s][吞吐率：128.02req/s] [内存消耗：911.64kb] [文件加载：20]
+[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'layer' => 'skin',
+  'extend' => 'layer.ext.js,skin',
+  'moon' => 'style.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T10:15:19+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] www.yylm.com/error [运行时间：0.024118s][吞吐率：41.46req/s] [内存消耗：1,362.51kb] [文件加载：32]
+[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
+  'accept' => 'text/css,*/*;q=0.1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'www.yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ E:\NewProgram\yylm\application\error\controller\Index.php ]
+[ info ] [ VIEW ] E:\NewProgram\yylm/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T10:15:25+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/user/index.html
+[ log ] www.yylm.com/otadmins/user/index.html [运行时间：0.070856s][吞吐率：14.11req/s] [内存消耗：2,741.77kb] [文件加载：51]
+[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj; UM_distinctid=17586bcc3299ea-02a77369050625-f313f6d-1fa400-17586bcc32ab65; CNZZDATA1253472858=1310914591-1604280899-http%253A%252F%252Fwww.yylm.com%252F%7C1604280899',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ RUN ] app\otadmins\controller\User->index[ E:\NewProgram\yylm\application\otadmins\controller\User.php ]
+[ info ] [ VIEW ] E:\NewProgram\yylm/application/otadmins\view\user\index.html [ array (
+  0 => 'username',
+  1 => 'portrait',
+  2 => 'rolename',
+  3 => 'menu',
+  4 => 'Nowpage',
+  5 => 'allpage',
+  6 => 'val',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000999s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.002404s ]
+[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_admin` [ RunTime:0.001538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_admin` LIMIT 1 [ RunTime:0.037164s ]
+[ sql ] [ SQL ] SELECT `think_admin`.*,`title` FROM `think_admin` INNER JOIN `think_auth_group` `think_auth_group` ON `think_admin`.`groupid`=`think_auth_group`.`id` ORDER BY id desc LIMIT 0,10 [ RunTime:0.001201s ]
+
+---------------------------------------------------------------
+[ 2020-11-02T10:15:25+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/user/index.html?page=1&key=
+[ log ] www.yylm.com/otadmins/user/index.html?page=1&key= [运行时间：0.046486s][吞吐率：21.51req/s] [内存消耗：2,587.30kb] [文件加载：49]
+[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj; UM_distinctid=17586bcc3299ea-02a77369050625-f313f6d-1fa400-17586bcc32ab65; CNZZDATA1253472858=1310914591-1604280899-http%253A%252F%252Fwww.yylm.com%252F%7C1604280899',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.yylm.com/otadmins/user/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'www.yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'key' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ RUN ] app\otadmins\controller\User->index[ E:\NewProgram\yylm\application\otadmins\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011081s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.008437s ]
+[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.000913s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_admin` [ RunTime:0.001601s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_admin` LIMIT 1 [ RunTime:0.000681s ]
+[ sql ] [ SQL ] SELECT `think_admin`.*,`title` FROM `think_admin` INNER JOIN `think_auth_group` `think_auth_group` ON `think_admin`.`groupid`=`think_auth_group`.`id` ORDER BY id desc LIMIT 0,10 [ RunTime:0.000673s ]
+
+---------------------------------------------------------------

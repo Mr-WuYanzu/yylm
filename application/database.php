@@ -3,10 +3,10 @@
 return [
     
     'type'           => 'mysql',	     // 数据库类型   
-    'hostname'       => '127.0.0.1',     // 服务器地址   
+    'hostname'       => '192.168.0.7',     // 服务器地址
     'database'       => 'yylm_hiyll_com',     // 数据库名
-    'username'       => 'yylm_hiyll_com',	 // 用户名  
-    'password'       => 'Ga7bEBsZEGbWtt7a',	 // 密码
+    'username'       => 'root',	 // 用户名
+    'password'       => '00dfcc9ccd5d4a4f',	 // 密码
     'hostport'       => '3306',	         // 端口
     'dsn'            => '',	             // 连接dsn
     'params'         => [],	             // 数据库连接参数   
