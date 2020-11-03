@@ -218,3 +218,13 @@ function templateMsg($openid,$data,$url=''){
 //            return false;
 //        }
 }
+
+function respond($code, $msg, $data = [])
+{
+    $res = [
+        'code' => $code,
+        'msg' => $msg
+    ];
+    empty($res) ?: $res['data'] = $data;
+    return $res;
+}
