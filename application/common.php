@@ -171,6 +171,20 @@ function randStr($n)
 }
 
 /*
+ * 随机数字
+ */
+function randNum($n)
+{
+    $characters = '1234567890';
+    $randomString = '';
+    for ($i = 0; $i < $n; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $randomString .= $characters[$index];
+    }
+    return $randomString;
+}
+
+/*
  * 获取微信access_token
  */
 function getAccessToken(){
@@ -181,7 +195,7 @@ function getAccessToken(){
             return $access_token;
         }
     }
-    $access_token = file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.getenv('weixin.appid').'&secret='.getenv('weixin.appsecret'));
+    $access_token = file_get_contents('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.config('appid').'&secret='.config('appsecret'));
     if(!empty($access_token)){
         $access_token = json_decode($access_token,true);
         if(isset($access_token['access_token'])){
@@ -227,4 +241,12 @@ function respond($code, $msg, $data = [])
     ];
     empty($res) ?: $res['data'] = $data;
     return $res;
+}
+
+/*
+ * 生成订单号
+ */
+function create_order_no($prefix = '')
+{
+    return md5($prefix . microtime());
 }

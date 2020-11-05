@@ -40,11 +40,13 @@ class Activity
             $act_details = $this->act_pro_model->getList($id);
             #处理商家信息
             $dealer_ids = array_unique(array_column($act_details,'dealer_id'));
-            $dealer_info = $this->dealer_model->getInfoByIds($dealer_ids);
+            $dealer_info = $this->dealer_model->getInfoByIds($dealer_ids,$id);
             $dealer_names = array_column($dealer_info,'name','id');
+            $dealer_img = array_column($dealer_info,'cost_img','id');
             $act_data = [];
             foreach ($act_details as $k=>$v){
                 $act_details[$k]['dealer_name'] = isset($dealer_names[$v['dealer_id']])?$dealer_names[$v['dealer_id']]:'';
+                $act_details[$k]['dealer_img'] = isset($dealer_img[$v['dealer_id']])?$dealer_img[$v['dealer_id']]:'';
                 $act_details[$k]['pass_time'] = date('Y-m-d H:i:s',$v['pass_time']);
                 $act_data[$v['dealer_id']][] = $act_details[$k];
             }
@@ -52,5 +54,17 @@ class Activity
             $data['details'] = $act_data;
         }
         return respond(200,'成功',$data);
+    }
+
+    public function getDetails($id,$dealer_id){
+        if(empty($id) || empty($dealer_id)){
+            return respond(1000,'参数错误');
+        }
+        $dealer_info = $this->dealer_model->getInfoById($dealer_id);
+        $activity_details = $this->act_pro_model->getList($id,$dealer_id);
+        foreach ($activity_details as $k=>$v){
+            $activity_details[$k]['pass_time'] = date('Y-m-d H:i:s',$v['pass_time']);
+        }
+        return respond(200,'成功',['data'=>$activity_details,'dealer_info'=>$dealer_info]);
     }
 }

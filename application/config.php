@@ -111,6 +111,16 @@ return [
     'gee_key' => '9977de876b194d227b2209df142c92a0',
     'auth_key' => 'JUD6FCtZsqrmVXc2apev4TRn3O8gAhxbSlH9wfPN', //默认数据加密KEY
     'pages'    => '10',//分页数 
-    'salt'     => 'wZPb~yxvA!ir38&Z',//加密串 
+    'salt'     => 'wZPb~yxvA!ir38&Z',//加密串
+
+
+    //平台抽取百分比配置  10%
+    'service_brokerage' => 0.1,
+
+    // 微信配置
+    'appid' => 'wx08e9982eef04105d',
+    'appsecret' => '9b2a293089bae46914d39c2d84896d82',
+    'mchid' => '1555600481',
+    'key'   => 'OVzFt0KuzPsgbAq8LLVSSJSmg3T5k92A'
 
 ];
