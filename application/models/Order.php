@@ -41,4 +41,67 @@ class Order extends Model
         }
         return respond(200,'成功',[]);
     }
+
+    /*
+     * 获取订单信息
+     */
+    public function getInfoByUnique($unique){
+        if(empty($unique)){
+            return [];
+        }
+        $data = $this->where('unique',$unique)->find();
+        if($data){
+            return $data->toArray();
+        }
+        return [];
+    }
+
+    /*
+     * 获取订单信息
+     */
+    public function getInfoByVolumeId($volume_no){
+        if(empty($volume_no)){
+            return [];
+        }
+        $data = $this->where('volume_no',$volume_no)->find();
+        if($data){
+            return $data->toArray();
+        }
+        return [];
+    }
+
+    /*
+    * 获取订单信息
+    */
+    public function getInfo($order_id='',$is_pay='',$uid=''){
+        $where = [];
+        if(!empty($order_id)){
+            $where['order_id'] = ['=',$order_id];
+        }
+        if(!empty($is_pay)){
+            $where['is_pay'] = ['=',$is_pay];
+        }
+        if(!empty($uid)){
+            $where['uid'] = ['=',$uid];
+        }
+        $data = $this->where($where)->find();
+        if($data){
+            return $data->toArray();
+        }
+        return [];
+    }
+
+    public function add($data){
+        if(empty($data)){
+            return false;
+        }
+        return $this->insertGetId($data);
+    }
+
+    public function upd($id,$data){
+        if(empty($id) || empty($data)){
+            return false;
+        }
+        return $this->where('order_id',$id)->update($data);
+    }
 }
