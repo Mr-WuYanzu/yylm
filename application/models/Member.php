@@ -14,7 +14,7 @@ class Member extends Model
        if(empty($user_ids)){
            return [];
        }
-       $data = $this->field('id,nickname')->whereIn('id',$user_ids)->select();
+       $data = $this->field('id,nickname,head_img')->whereIn('id',$user_ids)->select();
        if($data){
            return collection($data)->toArray();
        }

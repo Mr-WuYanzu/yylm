@@ -4,6 +4,7 @@
 namespace app\client\controller;
 
 
+use app\models\Complaint;
 use app\models\Member;
 use think\Controller;
 
@@ -73,5 +74,28 @@ class User extends Controller
                 exit('授权失败');
             }
         }
+    }
+
+    /*
+     * 用户投诉
+     */
+    public function complain(){
+        $data = [
+            'uid' => request()->get('uid'),
+            'act_id' => request()->get('act_id'),
+            'admin_id' => request()->get('admin_id'),
+            'cont_id' => request()->get('cont_id'),
+            'marks' => request()->get('marks'),
+            'phone' => request()->get('phone')
+        ];
+        if(empty($data['cont_id']) || empty($phone)){
+            return json(respond(1000,'参数错误'));
+        }
+        $complaint_model = new Complaint();
+        $res = $complaint_model->add($data);
+        if($res){
+            return json(respond(200,'成功'));
+        }
+        return json(respond(1000,'失败'));
     }
 }

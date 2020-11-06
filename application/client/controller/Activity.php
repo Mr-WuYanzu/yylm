@@ -38,4 +38,15 @@ class Activity extends \think\Controller
         $data = $activity_model->getDetails($id,$dealer_id);
         return json($data);
     }
+
+    /*
+     * 活动分享
+     */
+    public function sharePoster(){
+        $activity_model = new \app\client\model\Activity();
+        $act_id = request()->get('act_id');
+        $uid = request()->get('uid');
+        $data = $activity_model->share($act_id,$uid);
+        return $data;
+    }
 }

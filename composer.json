@@ -1,0 +1,6 @@
+{
+    "require": {
+        "qiniu/php-sdk": "^7.3",
+        "endroid/qr-code": "^3.9"
+    }
+}

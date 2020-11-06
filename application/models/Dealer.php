@@ -27,7 +27,7 @@ class Dealer extends Model
         return [];
     }
 
-    public function getInfoById($dealer_id){
+    public function getInfoById($dealer_id,$act_id=''){
         if(empty($dealer_id)){
             return [];
         }
