@@ -20,7 +20,7 @@ class Dealer extends Model
         if(!empty($act_id)){
             $where['act_id'] = $act_id;
         }
-        $data = $this->field('id,name,cost_img')->where($where)->select();
+        $data = $this->field('id,name,cost_img,logo')->where($where)->select();
         if($data){
             return collection($data)->toArray();
         }
