@@ -57,7 +57,7 @@ class Buy
         }
         if(!empty($share_id) && $act_info['share_type'] == 2){
             #验证分享人是否购买
-            $order_data = $this->order_model->getInfo('',2,$share_id);
+            $order_data = $this->order_model->getInfo('',2,$share_id,$id);
             if(empty($order_data)){
                 $share_id = 0;  #未满足分享条件 取消分享用户
             }

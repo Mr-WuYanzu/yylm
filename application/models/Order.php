@@ -75,7 +75,7 @@ class Order extends Model
     /*
     * 获取订单信息
     */
-    public function getInfo($order_id='',$is_pay='',$uid=''){
+    public function getInfo($order_id='',$is_pay='',$uid='',$act_id=''){
         $where = [];
         if(!empty($order_id)){
             $where['order_id'] = ['=',$order_id];
@@ -85,6 +85,9 @@ class Order extends Model
         }
         if(!empty($uid)){
             $where['uid'] = ['=',$uid];
+        }
+        if(!empty($act_id)){
+            $where['act_id'] = ['=',$act_id];
         }
         $data = $this->where($where)->find();
         if($data){
