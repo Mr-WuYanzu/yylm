@@ -1,0 +1,575 @@
+{include file="public/header" /}
+<link rel="stylesheet" type="text/css" media="all" href="/sldate/daterangepicker-bs3.css" />
+<style>
+    .col-sm-1{
+        padding: 0px 3px 0px 0px;
+    }
+    .col-sm-2{
+        padding: 0px 3px 0px 0px;
+    }
+    .col-sm-4{
+        padding: 0px 3px 0px 0px;
+    }
+</style>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <!-- Panel Other -->
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h2>
+               订单列表
+            </h2>
+            <span>今日订单数：{$order_count.day}</span>
+            <span>作日订单数：{$order_count.last_day}</span>
+            <span>本月订单数：{$order_count.month}</span>
+            <span>上月订单数：{$order_count.last_month}</span>
+            <span>总订单数：{$order_count.zong}</span>
+        </div>
+        <div class="ibox-content">
+            <!--搜索框开始-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <form name="list_sea" class="form-search" method="get" action="{:url('index')}" id="list_sea">
+                        <input type="hidden" name="type" value="{$type}"/>
+                        <div  class="col-sm-2">
+                            <div class="input-group" >
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <input type="text" class="form-control sl-date" name="reservation" id="reservation" value="{$reservation}" placeholder="点击选择日期范围"/>
+                            </div>
+                        </div>
+                        <div  class="col-sm-1">
+                            <div class="form-group">
+                                <select class="form-control m-b" name="type" id="type">
+                                    <option value="0" {if $type == 0} selected {/if}>全部</option>
+                                    <option value="1" {if $type == 1} selected {/if}>单商家拓客</option>
+                                    <option value="2" {if $type == 2} selected {/if}>多商家拓客</option>
+                                    <option value="3" {if $type == 3} selected {/if}>共享商圈</option>
+                                    <option value="4" {if $type == 4} selected {/if}>免单活动</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <input type="text" id="key" class="form-control" name="key" value="{$val}" placeholder="输入订单号/用户昵称/手机号/进行筛选" />
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> 搜索</button>
+                                    <button type="button" class="btn btn-primary" style="margin-left: 10px;" onclick="excel();"><i class="fa fa-file"></i> 导出Excel</button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <!--搜索框结束-->
+            <div style="float: left;">
+                <input type="checkbox" id="checkAll" style="margin-left: 16px;width:17px;height:17px;margin-top: 8px;">
+                <label>全选</label>
+            </div>
+            <div style="margin-left: 15px;float: left;margin-top: 8px;">
+                <a href="javascript:;" class="btn btn-danger btn-outline btn-xs" onclick="del_all()">批量删除</a>
+            </div>
+            <div class="example-wrap">
+                <div class="example">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr class="long-tr">
+                            <th>多选</th>
+                            <th>序号</th>
+                            <th>订单编号</th>
+                            <th>订单类型</th>
+                            <th>用户信息</th>
+                            <th>活动名</th>
+                            <th>实际支付</th>
+                            <th>下单时间</th>
+                        </tr>
+                        </thead>
+
+                        <script id="list-template" type="text/html">
+                            {{# for(var i=0;i<d.length;i++){  }}
+                            <tr class="long-td">
+                                <td>
+                                    <input type="checkbox" value="{{d[i].order_id}}" name="all[]"  style="width:17px;height:17px;" onclick="checkbox($(this))">
+                                </td>
+                                <td>{{i+1}}</td>
+                                <td>{{d[i].unique}}</td>
+                                <td>
+                                    {{# if(d[i].type == '1'){ }}
+                                    单商家拓客
+                                    {{# }else if(d[i].type == 2){ }}
+                                    多商家拓客
+                                    {{# }else if(d[i].type == 3){ }}
+                                    共享商圈
+                                    {{# }else if(d[i].type == 4){ }}
+                                    免单活动
+                                    {{# } }}
+                                </td>
+                                <td>{{d[i].nickname}}-{{d[i].phone}}</td>
+                                <td>{{d[i].title}}</td>
+                                <td>{{d[i].pay_price}}</td>
+                                <td>{{d[i].add_time}}</td>
+
+                            </tr>
+                            {{# } }}
+                        </script>
+                        <tbody id="list-content"></tbody>
+                    </table>
+
+                    <div id="AjaxPage" style=" text-align: right;"></div>
+                    <div style="text-align: right;">
+                        共{$count}条数据，<span id="allpage"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Example Pagination -->
+        </div>
+    </div>
+</div>
+<!-- End Panel Other -->
+</div>
+<div class="modal inmodal fade" id="myModal6" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h2>订单号：</h2>
+            </div>
+            <div class="modal-body" id="my_order">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 加载动画 -->
+<div class="spiner-example">
+    <div class="sk-spinner sk-spinner-three-bounce">
+        <div class="sk-bounce1"></div>
+        <div class="sk-bounce2"></div>
+        <div class="sk-bounce3"></div>
+    </div>
+</div>
+<div class="modal inmodal fade" id="myModal7" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4>输入发货信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal" >
+                    <input id="order_id" type="hidden" name="order_id" value=""/>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">快递/物流单号</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="logisticCode" id="logisticCode" placeholder="快递/物流单号" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">发货时间</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="express_time" value="" placeholder="点击选择服务时间" id="writer" class="form-control" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-8">
+                            <button class="btn btn-sm btn-primary" type="button"  onclick="toVaild()" style="float: right">发货</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{include file="public/footer" /}
+<script type="text/javascript" src="/sldate/moment.js"></script>
+<script type="text/javascript" src="/sldate/daterangepicker.js"></script>
+
+<script type="text/javascript">
+    var config = {
+        '.chosen-select': {},
+    };
+    for (var selector in config) {
+        $(selector).chosen(config[selector]);
+    }
+
+
+    $('#reservation').daterangepicker(null, function(start, end, label) {});
+    function details(id,order_sn) {
+        $(".modal-header h2").text("订单号:"+order_sn);
+        // $("#number").text("订单号：" + parseInt(order_number));
+        $.post("{:url('r_order')}",{order_id:id},function (data) {
+            var html = '';
+            for(var i=0;i<data.data.length;i++){
+                html += ' <div class="feed-element">' +
+                    '         <a href="javascript:;" class="pull-left">' +
+                    '            <img alt="image" style="margin-top: 15px;" class="img-circle" src="/uploads/images/'+data.data[i].photo+'">' +
+                    '         </a>' +
+                    '         <div class="media-body ">' +
+                    '           <small class="pull-right text-navy" style="margin-top: 15px;">数量：'+data.data[i].goods_num+'</small>' +
+                    '           <small class="text-muted">'+data.data[i].goods_name+'</small>' +
+                    '            <br>' +
+                    '            <small class="text-muted" style="color: red">总价(不含运费)：￥'+data.data[i].amount+' </small><br/>' +
+                    '            <small class="text-muted" style="color: red">规格：'+data.data[i].spec_name+' </small><br/>' +
+                    '            <small class="text-muted" style="color: red">运费：￥'+data.data[i].goods_freight+' </small><br/>' +
+                    '            <small class="text-muted" style="color: red">备注：'+data.data[i].msg+' </small><br/>' +
+                    '          </div>' +
+                    '      </div>';
+            }
+
+            $("#my_order").html(html);
+            $("#myModal6").modal('show');
+        });
+
+    }
+
+
+
+    /** 全选-全不选**/
+    $('#checkAll').click(function () {
+        if ($(this).is(':checked')) {
+            $('input[name="all[]"]').each(function () {
+                $(this).prop("checked", true);
+            });
+        } else {
+            $('input[name="all[]"]').each(function () {
+                $(this).prop("checked", false);
+            });
+        }
+    });
+
+    function express(order_id) {
+        var load = layer.load();
+        $.post("{:url('Order/express')}",{order_id:order_id},function (data) {
+            if(data.code == 1){
+                layer.alert(data.msg,{'title':'物流信息'});
+            }else{
+                layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1}, function(index){
+                    layer.close(index);
+                });
+            }
+            layer.close(load);
+        });
+    }
+
+
+    function checkbox(obj) {
+        var name = $('input[name="all[]"]');
+        var count = 0;
+        if (obj.is(':checked')) {
+            name.each(function () {
+                if ($(this).prop("checked") === true) {
+                    count++;
+                }
+            });
+            if (count === name.length) {
+                $("#checkAll").prop("checked", true);
+            }
+        } else {
+
+            $("#checkAll").prop("checked", false);
+        }
+    }
+    
+    function all_fh() {
+        var val = [];
+        $('input[name="all[]"]').each(function () {
+            if ($(this).prop("checked") === true) {
+                val.push($(this).val())
+            }
+        });
+        if(val.length <= 0){
+            layer.msg("请选择要发货的订单！");
+            return false;
+        }
+
+        var msg = "批量发货只能操作自提订单！<br/>您选择的订单数量为："+val.length+"<br/>是否批量发货，此操作不可逆转，请确认！";
+        layer.confirm(msg,{'title':'请确认'},function(){
+            $.post("{:url('Order/all_fh')}",{val:JSON.stringify(val)},function (data) {
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon: 6,time:1500,shade: 0.1}, function(index){
+                        layer.close(index);
+                        window.location.reload();
+                    });
+                }else{
+                    layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1}, function(index){
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    }
+
+
+    function all_sh() {
+        var val = [];
+        $('input[name="all[]"]').each(function () {
+
+            if ($(this).prop("checked") === true) {
+
+                val.push($(this).val())
+            }
+        });
+        if(val.length <= 0){
+            layer.msg("请选择要收货的订单！");
+            return false;
+        }
+        var msg = "您选择的订单数量为："+val.length+"<br/>是否批量收货，此操作不可逆转，请确认！";
+        layer.confirm(msg,{'title':'请确认'},function(){
+            $.post("{:url('Order/all_sh')}",{val:JSON.stringify(val)},function (data) {
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon: 6,time:1500,shade: 0.1}, function(index){
+                        layer.close(index);
+                        window.location.reload();
+                    });
+                }else{
+                    layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1}, function(index){
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    }
+
+    function del_all() {
+        var val = [];
+        $('input[name="all[]"]').each(function () {
+
+            if ($(this).prop("checked") === true) {
+
+                val.push($(this).val())
+            }
+        });
+        if(val.length <= 0){
+            layer.msg("请选择要删除的订单！");
+            return false;
+        }
+
+        var msg = "您选择的订单数量为："+val.length+"<br/>是否批量删除，此操作不可逆转，请确认！";
+        layer.confirm(msg,{'title':'请确认'},function(){
+            $.post("{:url('Order/del_all')}",{val:JSON.stringify(val)},function (data) {
+                if(data.code == 1){
+                    layer.msg(data.msg, {icon: 6,time:1500,shade: 0.1}, function(index){
+                        layer.close(index);
+                        window.location.reload();
+                    });
+                }else{
+                    layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1}, function(index){
+                        layer.close(index);
+                    });
+                }
+            });
+        });
+    }
+
+
+    //laypage分页
+    Ajaxpage();
+    function Ajaxpage(curr){
+        var key=$('#key').val();
+        $.getJSON('{:url("Order/index")}', {
+            page: curr || 1,key:key}, function(data){
+            console.log(data);
+
+            $(".spiner-example").css('display','none'); //数据加载完关闭动画
+            if(data==''){
+                $("#list-content").html('<td colspan="20" style="padding-top:10px;padding-bottom:10px;font-size:16px;text-align:center">暂无数据</td>');
+            }else{
+                var tpl = document.getElementById('list-template').innerHTML;
+                laytpl(tpl).render(data, function(html){
+                    document.getElementById('list-content').innerHTML = html;
+                });
+                laypage({
+                    cont: $('#AjaxPage'),//容器。值支持id名、原生dom对象，jquery对象,
+                    pages:'{$allpage}',//总页数
+                    skip: true,//是否开启跳页
+                    skin: '#1AB5B7',//分页组件颜色
+                    curr: curr || 1,
+                    groups: 3,//连续显示分页数
+                    jump: function(obj, first){
+                        if(!first){
+                            Ajaxpage(obj.curr)
+                        }
+                        $('#allpage').html('第'+ obj.curr +'页，共'+ obj.pages +'页');
+                    }
+                });
+            }
+        });
+    }
+
+    function del_order(order_id) {
+        var msg = "删除后不可恢复，请确认！";
+        layer.confirm(msg,function(){
+            $.post("{:url('Order/del_order')}",{order_id:order_id},function (data) {
+                if(data.code == 1){
+                    window.location.reload();
+                }else{
+                    layer.msg("删除失败！");
+                }
+            });
+        });
+    }
+
+    /**
+     * 原点 2019年9月16日14:14:52 快递发货
+     */
+    function fh(order_id) {
+        $("#order_id").val(order_id);
+        $("#myModal7").modal('show');
+    }
+    function toVaild() {
+        const order_id = $('#order_id').val();
+        const shipperCode = $('#shipperCode').val();
+        const logisticCode = $('#logisticCode').val();
+        const express_time = $('#writer').val();
+        if(order_id == ""){
+            layer.msg("发货失败");
+            return false;
+        }
+        if(shipperCode == ""){
+            layer.msg("请选择物流/快递");
+            $('#kd_name').focus();
+            return false;
+        }
+        if(logisticCode == ""){
+            layer.msg("请输入物流单号");
+            $('#kd_dh').focus();
+            return false;
+        }
+        if(express_time == ""){
+            layer.msg("请选择发货时间");
+            return false;
+        }
+        $.post("{:url('Order/fh_order')}",{order_id:order_id,shipperCode:shipperCode,logisticCode:logisticCode,express_time:express_time},function (data) {
+            if (data.code == 1) {
+                layer.alert(data.msg, {icon: 1}, function (index) {
+                    layer.close(index);
+                    window.location.reload();
+                });
+            } else {
+                layer.alert(data.msg, {icon: 5}, function (index) {
+                    layer.close(index);
+                });
+            }
+        });
+    }
+
+    /**
+     * 原点 2019年9月16日14:15:18 自提发货
+     */
+    function zt_fh(order_id) {
+
+        layer.confirm("确定要发货吗？",function(){
+            if(order_id == ""){
+                layer.msg("发货失败");
+            }else{
+                $.post("{:url('zt_fh')}",{order_id:order_id},function (data) {
+                    if(data.code == 1){
+                        layer.msg(data.msg, {icon: 6,time:1500,shade: 0.1}, function(index){
+                            layer.close(index);
+                            window.location.reload();
+                        });
+                    }else{
+                        layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1}, function(index){
+                            layer.close(index);
+                        });
+                    }
+                });
+            }
+        });
+
+    }
+
+    function touch_add(order_id) {
+        $.post("{:url('ck_order')}",{order_id:order_id},function (data) {
+            if(data.code == 1){
+                layer.alert('下单地址：</br></br>' +
+                    '姓名：'+data.data['address']['name']+'</br>电话：'+data.data['address']['tel']+'</br>地址：'+data.data['address']['address']+'</br>' +
+                    '详细地址：'+data.data['address']['details']+'', {
+                    title:false,
+                    skin: 'layer-ext-moon'
+                });
+            }
+        });
+    }
+
+
+    function sh(order_id) {
+        $.post("{:url('ck_order')}",{order_id:order_id},function (data) {
+            if(data.code == 1){
+                $("#sh_yy").text("取消原因：" + data.data.del_msg);
+                $("#del_member_id").val(order_id);
+                layer.open({
+                    type: 1,
+                    title: false,
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['350px', '280px'], //宽高
+                    content: $('#dl_state')
+                });
+            }
+
+        });
+    }
+
+    /**
+     * 原点 2018年4月14日09:34:43 用户前台取消订单，后台确定审核操作
+     */
+    function ok_sh() {
+        var order_id = $("#del_member_id").val();
+        layer.confirm("请仔细核对信息，请确认是否审核？",function(){
+            if(order_id == ""){
+                layer.msg("审核失败");
+            }else{
+                $.post("{:url('del_order')}",{order_id:order_id},function (data) {
+                    if(data.code == 1){
+                        layer.msg(data.msg, {icon: 6,time:1500,shade: 0.1}, function(index){
+                            layer.close(index);
+                            window.location.reload();
+                        });
+                    }else{
+                        layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1}, function(index){
+                            layer.close(index);
+                        });
+                    }
+                });
+            }
+        });
+    }
+
+    /**
+     * 原点 2019年9月25日15:45:34 导出excel
+     */
+    function excel() {
+        const new_url = "{:url('excel_order')}";
+        $("#list_sea").attr('action',new_url);
+        layer.confirm('可以根据条件筛选导出，点击确定导出Excel', {icon: 3, title:'提示'}, function(index){
+            layer.msg('渲染数据中...', {icon: 16, shade: 0.01});
+            $("#list_sea").submit();
+            setTimeout('layer.closeAll();layer.msg("已导出");$("#list_sea").attr("action","/otadmins/order/index");',1000)
+        })
+    }
+
+    $("#delivery_mode").change(function () {
+        $('#list_sea').submit();
+    });
+
+    $("#state").change(function () {
+        $('#list_sea').submit();
+    });
+    $("#point_id").change(function () {
+        $('#list_sea').submit();
+    });
+
+
+
+
+</script>
+</body>
+</html>

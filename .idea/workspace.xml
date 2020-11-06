@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/application/otadmins/controller/Order.php" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="185c2830-137d-4d6b-b128-9c3524582a1b" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.user.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/otadmins/controller/Member.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/otadmins/controller/Member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/otadmins/view/member/add_group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/otadmins/view/member/add_member.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/otadmins/view/member/edit_group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/otadmins/view/member/edit_member.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/otadmins/view/member/group.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/otadmins/view/member/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/otadmins/view/member/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/cache/50/e42e2e0c46db6eb01ed4a3be845c44.php" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/cache/50/e42e2e0c46db6eb01ed4a3be845c44.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/log/202011/02.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/log/202011/02.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/371369004a51bccefbb5a52604e2cdfd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/7c21df54e92bf47dd9dd0c7a1c95e5de.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/964715d2a5cfa1e0ec0d02ba045d5dac.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/temp/9e9eebec71a91664f46ed4aee2d563f9.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,67 +28,114 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/thinkphp/composer.json</pharConfigPath>
+  </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/application/otadmins/view/act/edit.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-182">
+                    <caret line="55" column="113" selection-start-line="55" selection-start-column="102" selection-end-line="55" selection-end-column="113" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/config.php">
+        <entry file="file://$PROJECT_DIR$/application/otadmins/controller/Act.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="475">
+              <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+              <folding>
+                <element signature="e#41#73#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web.config">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/application/otadmins/model/ActModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="399">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+              <folding>
+                <element signature="e#37#53#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/command.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/route.php">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/application/otadmins/view/act/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2261">
+              <caret line="194" selection-start-line="194" selection-end-line="195" selection-end-column="73" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#small#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>APP_DEBUG</find>
+      <find>member_status</find>
+      <find>toVaild</find>
+      <find>remark</find>
+      <find>n ind</find>
+      <find>excel</find>
+      <find>del_all</find>
+      <find>n lev</find>
+      <find>wa</find>
+      <find>walletlog</find>
+      <find>ggjiesuan</find>
+      <find>cha_jiesuan</find>
+      <find>cha_renwu</find>
+      <find>n edit_le</find>
+      <find>set_golden</find>
+      <find>controller</find>
+      <find>LaunchAliPay</find>
+      <find>提现</find>
+      <find>LaunchAliPays</find>
+      <find>认证</find>
+      <find>$article</find>
+      <find>WebUploader</find>
+      <find>data_photo</find>
+      <find>up_fileList</find>
+      <find>imgPickers</find>
+      <find>uploadSuccess</find>
+      <find>fileQueued</find>
+      <find>fileList</find>
+      <find>imgPicker</find>
+      <find>reservation</find>
+      <find>edit</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>$act</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -81,14 +143,49 @@
         <option value="$PROJECT_DIR$/application/database.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/config.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/model/FinanceModel.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/finance/commission.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/controller/Finance.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/finance/transaction.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp19157/www/wwwroot/ce.niushishop.com/Application/Otcms/Controller/MemberController.class.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/order/index.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/model/OrderModel.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/model/OrderDetailModel.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp45512/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/index.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/member/index.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/model/AdminModel.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/member/daili.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/controller/Member.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/coop/index.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/order/write_off.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/model/CoopModel.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/controller/Coop.php" />
+        <option value="$USER_HOME$/Desktop/hosts" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp32850/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/edit_level.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp34658/www/wwwroot/ji.quweiji.net/application/otadmins/controller/Member.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp22330/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/level.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp54274/www/wwwroot/ji.quweiji.net/application/api/controller/Member.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp50232/www/wwwroot/ji.quweiji.net/application/api/controller/Article.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp14176/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/level.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp15585/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/edit_level.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp23207/www/wwwroot/ji.quweiji.net/application/api/controller/Third.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp24841/www/wwwroot/ji.quweiji.net/application/api/controller/Index.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp33238/www/wwwroot/ji.quweiji.net/application/api/controller/Member.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp17192/www/wwwroot/ji.quweiji.net/application/api/controller/Alipay.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/scp35465/www/wwwroot/ji.quweiji.net/application/api/controller/Member.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/controller/Order.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/act/index.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/model/ActModel.php" />
+        <option value="$PROJECT_DIR$/application/otadmins/view/act/edit.html" />
+        <option value="$PROJECT_DIR$/application/otadmins/controller/Act.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-6" />
+    <option name="y" value="3" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -99,13 +196,31 @@
         <subPane>
           <expand>
             <path>
-              <item name="yylm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yylm" type="462c0819:PsiDirectoryNode" />
+              <item name="yylm.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yylm.com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="yylm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yylm" type="462c0819:PsiDirectoryNode" />
+              <item name="yylm.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yylm.com" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yylm.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yylm.com" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="otadmins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yylm.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yylm.com" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="otadmins" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yylm.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yylm.com" type="462c0819:PsiDirectoryNode" />
+              <item name="sldate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -115,7 +230,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -142,25 +259,24 @@
       <option name="presentableId" value="Default" />
       <updated>1604282863274</updated>
       <workItem from="1604282864476" duration="392000" />
+      <workItem from="1604368898713" duration="19730000" />
+      <workItem from="1604452324689" duration="25274000" />
+      <workItem from="1604493070356" duration="6158000" />
+      <workItem from="1604539529116" duration="15776000" />
+      <workItem from="1604625414087" duration="14694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="392000" />
+    <option name="totallyTimeSpent" value="82024000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="3" width="1936" height="1096" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="找到" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -168,46 +284,335 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="找到" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="找到" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/database.php">
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/member/group.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp00856/www/wwwroot/ce.niushishop.com/Application/Home/Controller/EmptyController.class.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp45512/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/index.html" />
+    <entry file="file://$PROJECT_DIR$/application/otadmins/model/AdModel.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/user/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="152">
+          <caret line="127" column="70" selection-start-line="127" selection-start-column="70" selection-end-line="127" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/command.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/member/daili.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="14" column="137" selection-start-line="14" selection-start-column="137" selection-end-line="14" selection-end-column="137" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/member/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/route.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/article/add_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="122" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web.config">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/sldate/daterangepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#513#519#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/order/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="203" column="4" selection-start-line="203" selection-start-column="4" selection-end-line="203" selection-end-column="76" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/controller/Member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
+          <folding>
+            <element signature="e#42#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/order/write_off.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="556" column="113" selection-start-line="556" selection-start-column="113" selection-end-line="556" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/controller/Coop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="115" column="40" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="40" />
+          <folding>
+            <element signature="e#41#74#0#PHP" expanded="true" />
+            <marker date="1604472158816" expanded="true" signature="169:825" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/model/CoopModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding>
+            <element signature="e#37#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/model/AdminModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/coop/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="87" column="51" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/hosts" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="247">
           <caret line="21" column="17" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config.php">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp46427/www/wwwroot/ji.quweiji.net/application/api/controller/Third.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp32850/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/edit_level.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp54274/www/wwwroot/ji.quweiji.net/application/api/controller/Member.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp49937/www/wwwroot/ji.quweiji.net/application/common.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp34658/www/wwwroot/ji.quweiji.net/application/otadmins/controller/Member.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp22330/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/level.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp16602/www/wwwroot/ji.quweiji.net/application/otadmins/controller/Member.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp33238/www/wwwroot/ji.quweiji.net/application/api/controller/Member.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp14176/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/level.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp24841/www/wwwroot/ji.quweiji.net/application/api/controller/Index.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp23207/www/wwwroot/ji.quweiji.net/application/api/controller/Third.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp15585/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/edit_level.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp50232/www/wwwroot/ji.quweiji.net/application/api/controller/Article.php" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp45320/www/wwwroot/ji.quweiji.net/application/otadmins/view/config/group.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp16272/www/wwwroot/ji.quweiji.net/application/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="-31" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp35465/www/wwwroot/ji.quweiji.net/application/api/controller/Member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="235" column="26" lean-forward="true" selection-start-line="235" selection-start-column="26" selection-end-line="235" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp17192/www/wwwroot/ji.quweiji.net/application/api/controller/Alipay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="107" column="21" lean-forward="true" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp35832/www/wwwroot/ji.quweiji.net/application/api/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/controller/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/article/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp47911/www/wwwroot/ji.quweiji.net/application/api/controller/Shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1425" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp48264/www/wwwroot/ji.quweiji.net/application/otadmins/controller/Goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="287" column="4" selection-start-line="287" selection-start-column="4" selection-end-line="316" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp42916/www/wwwroot/ji.quweiji.net/application/otadmins/view/article/add_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1140" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp54182/www/wwwroot/ji.quweiji.net/application/otadmins/view/goods/edit_goods.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3520">
+          <caret line="440" column="7" lean-forward="true" selection-start-line="440" selection-start-column="7" selection-end-line="440" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#6;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#6;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp43404/www/wwwroot/sijilm.quweiji.net/Application/Home/View/Order/jsApiCall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp44278/www/wwwroot/ji.quweiji.net/application/otadmins/view/member/add_member.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1083" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp44340/www/wwwroot/ji.quweiji.net/application/otadmins/view/flip/add_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp44845/www/wwwroot/ji.quweiji.net/application/otadmins/view/flip/add_prize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1482" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp45109/www/wwwroot/ji.quweiji.net/application/otadmins/view/role/roleadd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/model/ActModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding>
+            <element signature="e#37#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/act/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="194" selection-start-line="194" selection-end-line="195" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/view/act/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="55" column="113" selection-start-line="55" selection-start-column="102" selection-end-line="55" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/otadmins/controller/Act.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+          <folding>
+            <element signature="e#41#73#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

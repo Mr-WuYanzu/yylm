@@ -1,0 +1,168 @@
+{include file="public/header" /}
+<link rel="stylesheet" type="text/css" media="all" href="/sldate/daterangepicker-bs3.css" />
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <!-- Panel Other -->
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>交易明细</h5>
+        </div>
+        <div class="ibox-content">
+            <!--搜索框开始-->           
+            <div class="row">
+                <div class="col-sm-12">
+                    <form name="admin_list_sea" class="form-search" method="get" action="{:url('transaction')}">
+                        <div  class="col-sm-2">
+                            <div class="input-group" >
+                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                <input type="text" class="form-control sl-date" name="reservation" id="reservation" value="{$reservation}" placeholder="点击选择日期范围"/>
+                            </div>
+                        </div>
+                        <div  class="col-sm-1">
+                            <div class="form-group">
+                                <select class="form-control m-b" name="mark_id" id="mark_id">
+
+                                    <option value="0" {if $mark_id == 0} selected {/if}>全部</option>
+                                    <option value="4" {if $mark_id == 4} selected {/if}>获得佣金</option>
+                                    <option value="5" {if $mark_id == 5} selected {/if}>购买活动</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group">
+                                <input type="text" id="key" class="form-control" name="key" value="{$val}" placeholder="输入需查询的用户ID或昵称" />
+                                <span class="input-group-btn"> 
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> 搜索</button> 
+                                </span>
+                            </div>
+                        </div>
+                    </form>                         
+                </div>
+            </div>
+            <!--搜索框结束-->
+            <div class="hr-line-dashed"></div>
+            <div class="example-wrap">
+                <div class="example">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr class="long-tr">
+                                <th width="3%">序号</th>
+                                <th width="5%">用户ID</th>
+                                <th width="5%">用户昵称</th>
+                                <th width="5%">金额</th>
+                                <th width="4%">类型</th>
+                                <th width="10%">备注</th>
+                                <th width="5%">创建时间</th>
+                            </tr>
+                        </thead>
+                        <script id="list-template" type="text/html">
+                            {{# for(var i=0;i<d.length;i++){  }}
+                                <tr class="long-td">
+                                    <td>{{d[i].id}}</td>
+                                    <td>{{d[i].uid}}</td>
+                                    <td>{{d[i].nickname}}</td>
+                                    <td>
+                                        {{# if(d[i].money_type==1){ }}
+                                        +
+                                        {{# }else{ }}
+                                        -
+                                        {{# } }}
+                                        {{d[i].money}}
+                                    </td>
+                                    <td>
+                                        {{# if(d[i].mark_id==4){ }}
+                                        获得佣金
+                                        {{# }else{ }}
+                                        购买活动
+                                        {{# } }}
+                                    </td>
+                                    <td>{{d[i].marks}}</td>
+                                    <td>{{d[i].add_time}}</td>
+                                </tr>
+                            {{# } }}
+                        </script>
+                        <tbody id="list-content"></tbody>
+                    </table>
+                    <div id="AjaxPage" style="text-align:right;"></div>
+                    <div style="text-align: right;">
+                        共{$count}条数据，<span id="allpage"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- 加载动画 -->
+<div class="spiner-example">
+    <div class="sk-spinner sk-spinner-three-bounce">
+        <div class="sk-bounce1"></div>
+        <div class="sk-bounce2"></div>
+        <div class="sk-bounce3"></div>
+    </div>
+</div>
+
+{include file="public/footer" /}
+<script type="text/javascript" src="/sldate/moment.js"></script>
+<script type="text/javascript" src="/sldate/daterangepicker.js"></script>
+<script type="text/javascript">
+    $('#reservation').daterangepicker(null, function(start, end, label) {});
+    /**
+     * [Ajaxpage laypage分页]
+     * @param {[type]} curr [当前页]
+     */
+    Ajaxpage();
+
+    function Ajaxpage(curr){
+        var key=$('#key').val();
+        var mark_id = $("#mark_id").val();
+        var reservation = $("#reservation").val();
+        $.getJSON('{:url("Finance/transaction")}', {
+            page: curr || 1,key:key,mark_id:mark_id,reservation:reservation
+        }, function(data){      //data是后台返回过来的JSON数据
+			$(".spiner-example").css('display','none'); //数据加载完关闭动画
+            if(data==''){
+                $("#list-content").html('<td colspan="20" style="padding-top:10px;padding-bottom:10px;font-size:16px;text-align:center">暂无数据</td>');
+            }else{
+                var tpl = document.getElementById('list-template').innerHTML;
+                laytpl(tpl).render(data, function(html){
+                    document.getElementById('list-content').innerHTML = html;
+                });
+                laypage({
+                    cont: $('#AjaxPage'),//容器。值支持id名、原生dom对象，jquery对象,
+                    pages:'{$allpage}',//总页数
+                    skip: true,//是否开启跳页
+                    skin: '#1AB5B7',//分页组件颜色
+                    curr: curr || 1,
+                    groups: 3,//连续显示分页数
+                    jump: function(obj, first){
+                        if(!first){
+                            Ajaxpage(obj.curr)
+                        }
+                        $('#allpage').html('第'+ obj.curr +'页，共'+ obj.pages +'页');
+                    }
+                });
+            }
+        });
+    }
+ 
+
+//编辑文章
+function edit_article(id){
+    location.href = './edit_article/id/'+id+'.html';
+}
+
+//删除文章
+function del_article(id){
+    otcms.confirm(id,'{:url("del_article")}');
+}
+
+//文章状态
+function article_state(id){
+    otcms.status(id,'{:url("article_state")}');
+}
+
+</script>
+</body>
+</html>
