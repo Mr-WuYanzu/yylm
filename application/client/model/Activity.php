@@ -43,7 +43,7 @@ class Activity
             unset($data['vi_jion_num']);
             unset($data['vi_share_num']);
             $data['start_time'] = date('Y-m-d H:i:s',$data['start_time']);
-            $data['end_time'] = date('Y-m-d H:i:s',$data['end_time']);
+            $data['end_time']   = date('Y-m-d H:i:s',$data['end_time']);
             #获取详情
             $act_details = $this->act_pro_model->getList($id);
             #处理商家信息
