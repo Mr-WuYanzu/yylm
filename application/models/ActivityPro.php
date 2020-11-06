@@ -10,7 +10,7 @@ class ActivityPro extends Model
 {
     protected $table = 'think_act_pro';
 
-    public function getList($act_id,$dealer_id){
+    public function getList($act_id='',$dealer_id=''){
         $where = [];
         if(!empty($act_id)){
             $where['act_id'] = ['=',$act_id];

@@ -34,8 +34,10 @@ class Order extends Model
             $member_model = new Member();
             $user_info = $member_model->getInfoByIds($share_ids);
             $nicknames = array_column($user_info,'nickname','id');
+            $head_imgs = array_column($user_info,'head_img','id');
             foreach ($data as $k=>$v){
                 $data[$k]['nickname'] = isset($nicknames[$v['share_id']])?$nicknames[$v['share_id']]:'';
+                $data[$k]['head_img'] = isset($head_imgs[$v['share_id']])?$head_imgs[$v['share_id']]:'';
             }
             return respond(200,'成功',['count'=>$count,'page'=>$page,'page_size'=>$page_size,'price'=>$price,'data'=>$data]);
         }
