@@ -82,15 +82,15 @@ class User extends Controller
      */
     public function complain(){
         $data = [
-            'uid' => request()->get('uid'),
-            'act_id' => request()->get('act_id'),
-            'admin_id' => request()->get('admin_id'),
-            'cont_id' => request()->get('cont_id'),
-            'marks' => request()->get('marks'),
-            'phone' => request()->get('phone'),
+            'uid' => 1,
+            'act_id' => request()->post('act_id'),
+            'admin_id' => request()->post('admin_id'),
+            'cont_id' => request()->post('cont_id'),
+            'marks' => request()->post('marks'),
+            'phone' => request()->post('phone'),
             'add_time' => time()
         ];
-        if(empty($data['cont_id']) || empty($phone)){
+        if(empty($data['cont_id']) || empty($data['act_id'])){
             return json(respond(1000,'参数错误'));
         }
         $complaint_model = new Complaint();
