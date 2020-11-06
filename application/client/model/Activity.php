@@ -54,11 +54,14 @@ class Activity
             $logo = array_column($dealer_info,'logo','id');
             $act_data = [];
             foreach ($act_details as $k=>$v){
-                $act_details[$k]['dealer_name'] = isset($dealer_names[$v['dealer_id']])?$dealer_names[$v['dealer_id']]:'';
-                $act_details[$k]['dealer_img'] = isset($dealer_img[$v['dealer_id']])?$dealer_img[$v['dealer_id']]:'';
-                $act_details[$k]['dealer_logo'] = isset($logo[$v['dealer_id']])?$logo[$v['dealer_id']]:'';
                 $act_details[$k]['pass_time'] = date('Y-m-d H:i:s',$v['pass_time']);
                 $act_data[$v['dealer_id']][] = $act_details[$k];
+                $act_data[$v['dealer_id']]['dealer_id'] = $v['dealer_id'];
+            }
+            foreach ($act_data as $k=>$v){
+                $act_data[$k]['dealer_name'] =  isset($dealer_names[$v['dealer_id']])?$dealer_names[$v['dealer_id']]:'';
+                $act_data[$k]['dealer_img'] = isset($dealer_img[$v['dealer_id']])?$dealer_img[$v['dealer_id']]:'';
+                $act_data[$k]['dealer_logo'] = isset($logo[$v['dealer_id']])?$logo[$v['dealer_id']]:'';
             }
             array_multisort($act_data);
             $data['details'] = $act_data;
