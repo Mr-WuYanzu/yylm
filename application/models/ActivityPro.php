@@ -24,4 +24,19 @@ class ActivityPro extends Model
         }
         return [];
     }
+
+    public function getInfo($act_id,$pro_id){
+        if(empty($act_id) || empty($pro_id)){
+            return [];
+        }
+        $where = [
+            'act_id' => $act_id,
+            'id' => $pro_id
+        ];
+        $data = $this->where($where)->find();
+        if($data){
+            return $data->toArray();
+        }
+        return [];
+    }
 }

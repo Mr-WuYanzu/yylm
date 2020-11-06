@@ -29,4 +29,17 @@ class Buy extends Controller
             echo 'success';
         }
     }
+
+    /*
+     * 核销接口
+     */
+    public function cancel(){
+        $act_id = request()->post('act_id');
+        $pro_id = request()->post('pro_id');
+        $pwd = request()->post('pwd');
+        $uid = 1;
+        $buy_model = new \app\client\model\Buy();
+        $res = $buy_model->cancel($act_id,$pro_id,$uid,$pwd);
+        return json($res);
+    }
 }

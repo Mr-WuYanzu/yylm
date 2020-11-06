@@ -37,10 +37,23 @@ class Dealer extends Model
         if(!empty($act_id)){
             $where['act_id'] = $act_id;
         }
-        $data = $this->field('id,name,cost_img,sit,long,dime,act_id,marks,phone')->where($where)->find();
+        $data = $this->field('id,name,cost_img,sit,long,dime,act_id,marks,phone,cancel_pass')->where($where)->find();
         if($data){
             return $data->toArray();
         }
         return [];
+    }
+
+    public function getPwdById($dealer_id,$act_id=''){
+        if(empty($dealer_id)){
+            return [];
+        }
+        $where = [
+            'id' => ['=',$dealer_id]
+        ];
+        if(!empty($act_id)){
+            $where['act_id'] = $act_id;
+        }
+        return $this->where($where)->value('cancel_pass');
     }
 }

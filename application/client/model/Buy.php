@@ -5,6 +5,7 @@ namespace app\client\model;
 
 
 use app\models\ActivityPro;
+use app\models\Dealer;
 use app\models\Earnings;
 use app\models\Member;
 use app\models\Order;
@@ -21,6 +22,7 @@ class Buy
     private $wx_pay_model;
     private $member_model;
     private $earnings_model;
+    private $dealer_model;
     public $values;
 
     public function __construct()
@@ -32,6 +34,7 @@ class Buy
         $this->wx_pay_model = new WxPay();
         $this->member_model = new Member();
         $this->earnings_model = new Earnings();
+        $this->dealer_model = new Dealer();
     }
 
     public function pay($id,$phone,$uid,$marks,$share_id,$openid){
@@ -89,16 +92,18 @@ class Buy
             #添加进订单详情表
             $data = [];
             foreach ($act_details as $k=>$v){
-                $data[] = [
-                    'order_id' => $order_id,
-                    'admin_id' => $act_info['admin_id'],
-                    'act_id' => $id,
-                    'dealer_id' => $act_info['dealer_id'],
-                    'pro_id' => $v['id'],
-                    'uid' => $uid,
-                    'pass_time' => $v['pass_time'],
-                    'add_time' => $time
-                ];
+                for ($i=0;$i<intval($v['use_num']);$i++){
+                    $data[] = [
+                        'order_id' => $order_id,
+                        'admin_id' => $act_info['admin_id'],
+                        'act_id' => $id,
+                        'dealer_id' => $act_info['dealer_id'],
+                        'pro_id' => $v['id'],
+                        'uid' => $uid,
+                        'pass_time' => $v['pass_time'],
+                        'add_time' => $time
+                    ];
+                }
             }
             $res = $this->order_details_model->bathAdd($data);
             if(!$res){
@@ -219,6 +224,41 @@ class Buy
             }
 //        }
         return false;
+    }
+
+    /*
+     * 打款记录
+     */
+    public function cancel($act_id,$pro_id,$uid,$pwd){
+        if(empty($act_id) || empty($pro_id) || empty($uid) || empty($pwd)){
+            return respond(1000,'参数错误');
+        }
+        #根据产品信息获取产品id
+        $act_pro_info = $this->act_pro_model->getinfo($act_id,$pro_id);
+        if(empty($act_pro_info)){
+            return respond(1000,'产品不存在');
+        }
+        #验证用户是否购买过此活动
+        $order_info = $this->order_model->getInfo('',2,$uid,$act_id);
+        if(empty($order_info)){
+            return respond(1000,'请购买后再来核销');
+        }
+        #验证核销密码
+        $dealer_pwd = $this->dealer_model->getPwdById($act_pro_info['dealer_id'],$act_id);
+        if($dealer_pwd != $pwd){
+            return respond(1000,'核销密码错误');
+        }
+        #获取此产品剩余核销次数
+        $order_details = $this->order_details_model->getInfo($act_id,$pro_id,$uid,1,time());
+        if(empty($order_details)){
+            return respond(1000,'已经没有核销的次数了或活动已过期');
+        }
+        #核销成功
+        $res = $this->order_details_model->upd($order_details['id'],['is_cancel'=>2]);
+        if($res){
+            return respond(200,'成功');
+        }
+        return respond(1000,'参数错误');
     }
 
     /*
