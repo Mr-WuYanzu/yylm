@@ -55,7 +55,7 @@ class Activity
             $act_data = [];
             foreach ($act_details as $k=>$v){
                 $act_details[$k]['pass_time'] = date('Y-m-d H:i:s',$v['pass_time']);
-                $act_data[$v['dealer_id']][] = $act_details[$k];
+                $act_data[$v['dealer_id']]['data'][] = $act_details[$k];
                 $act_data[$v['dealer_id']]['dealer_id'] = $v['dealer_id'];
             }
             foreach ($act_data as $k=>$v){
