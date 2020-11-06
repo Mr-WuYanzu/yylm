@@ -4,6 +4,7 @@ namespace app\client\model;
 use app\models\ActivityPro;
 use app\models\Dealer;
 use app\models\Member;
+use app\models\Order;
 use app\models\Qiniu;
 use app\models\Redis;
 use Endroid\QrCode\QrCode;
@@ -14,6 +15,7 @@ class Activity
     private $act_pro_model;
     private $dealer_model;
     private $member_model;
+    private $order_model;
 
     public function __construct()
     {
@@ -21,6 +23,7 @@ class Activity
         $this->act_pro_model = new ActivityPro();
         $this->dealer_model = new Dealer();
         $this->member_model = new Member();
+        $this->order_model = new Order();
     }
 
     /*
@@ -82,12 +85,17 @@ class Activity
             return json(['code'=>1000,'msg'=>'参数错误']);
         }
         $act_info = $this->activity_model->getInfo($act_id);
-
-        $dealer_model = new Dealer();
+        if($act_info['share_type'] == 2){
+            #验证此用户是否购买过
+            $res = $this->order_model->getInfo('',2,$uid,$act_id);
+            if(!$res){
+                return json(['code'=>1000,'msg'=>'请购买后再分享']);
+            }
+        }
         $url = 'https://yylm.hiyll.com/';
         #获取用户信息
         $user_info = $this->member_model->getInfoById($uid);
-        if(empty($group_info['dealer_info'])){
+        if(empty($user_info)){
             return json(['code'=>1000,'msg'=>'失败']);
         }
         $qrcode = new QrCode($url);
@@ -95,17 +103,17 @@ class Activity
         if(!is_dir('qrcode')){
             mkdir('qrcode');
         }
-        $path ='qrcode/'.$name.'.jpg';
+        $path =__DIR__.'/../../../public/qrcode/'.$name.'.jpg';
         $qrcode->writeFile($path);
-        $res = $this->createImg($path,$user_info['head_img'],$user_info['nickname'],$act_info['post_img']);
+        $res = $this->createImg($path,$user_info['head_img'],$user_info['nickname'],'https://business.niushishop.com/'.$act_info['post_img']);
         if(!$res){
             return json(['code'=>1001,'msg'=>'失败']);
         }
         #生成成功返回前端图片路径
         if($res['code'] == 200){
-            return respond('200',['code'=>200,'msg'=>'成功','data'=>$img_url.'/'.$res['data']['key']]);
+            return respond('200','成功',$img_url.'/'.$res['data']['key']);
         }else{
-            return respond('1000',['code'=>1000,'msg'=>'失败']);
+            return respond('1000','失败');
         }
     }
 
@@ -113,20 +121,21 @@ class Activity
      * 生成图片
      */
     public function createImg($qrcode_path,$head_img,$user_name,$back_img){
-        $ch = curl_init($head_img); //$url是微信的图像地址
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $content = curl_exec($ch);
-        curl_close($ch);
-        $head_img=time().rand(1,9999).'.jpg';
-        file_put_contents('image/'.$head_img,$content);
+//        $ch = curl_init($head_img); //$url是微信的图像地址
+//        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//        $content = curl_exec($ch);
+////        curl_close($ch);
+//        $head_img=time().rand(1,9999).'.jpg';
+//        file_put_contents(__DIR__.'/../../../public/images/'.$head_img,$content);
         $config = [
             'image'=>[
                 [
-                    'url'=>'image/'.$head_img,     //头像地址
+//                    'url'=>__DIR__.'/../../../public/images/'.$head_img,     //头像地址
+                    'url'=>$head_img,     //头像地址
                     'is_yuan'=>false,          //true图片圆形处理
                     'stream'=>0,
-                    'left'=>70,               //小于0为小平居中
-                    'top'=>1160,
+                    'left'=>20,               //小于0为小平居中
+                    'top'=>50,
                     'right'=>0,
                     'width'=>120,             //图像宽
                     'height'=>120,            //图像高
@@ -136,43 +145,34 @@ class Activity
                     'url'=>$qrcode_path,     //二维码地址
                     'is_yuan'=>false,          //true图片圆形处理
                     'stream'=>0,
-                    'left'=>550,               //小于0为小平居中
-                    'top'=>1130,
+                    'left'=>30,               //小于0为小平居中
+                    'top'=>50,
                     'right'=>0,
                     'width'=>185,             //图像宽
                     'height'=>185,            //图像高
-                    'opacity'=>100            //透明度
+                    'opacity'=>100,            //透明度
+                    'type' => 1     // 特殊处理 计算宽高
                 ],
             ],
             'text'=>[
                 [
-                    'text'=>'门店直达',            //文字内容
-                    'left'=>22,                              //小于0为小平居中
-                    'top'=>78,
-                    'fontSize'=>38,                         //字号
+                    'text'=>$user_name,            //用户昵称
+                    'left'=>160,                              //小于0为小平居中
+                    'top'=>120,
+                    'fontSize'=>23,                         //字号
                     'fontColor'=>'255,255,255',                //字体颜色
                     'angle'=>0,
                 ]
             ],
             'background'=>$back_img,          //背景图
         ];
-        #用户名
-        $config['text'][] = [
-            'text'=>$user_name,            //文字内容
-            'left'=>210,                              //小于0为小平居中
-            'top'=>1190,
-            'fontSize'=>23,                         //字号
-            'fontColor'=>'0,0,0',                //字体颜色
-            'angle'=>0,
-        ];
 //        echo file_get_contents('simhei.ttf');exit;
         is_dir('share')?:mkdir('share');
-        $filename = 'share/'.time().'.jpg';
+        $filename = __DIR__.'/../../../public/share/'.time().'.jpg';
         //$filename为空是真接浏览器显示图片
         $res = $this->createPoster($config,$filename);
         unlink($filename);
         unlink($qrcode_path);
-        unlink('image/'.$head_img);
         return $res;
     }
 
@@ -181,7 +181,6 @@ class Activity
         //if(empty($filename)) header("content-type: image/png");
         if (empty($filename)) header("content-type: image/png;charset=utf-8");
         $font_path = __DIR__.'/../../../public/font/simhei.ttf';
-        $thick_path =  __DIR__.'/../../../public/font/Exotc350 Bd BT Bold.ttf';
         $imageDefault = array(
             'left' => 0,
             'top' => 0,
@@ -191,14 +190,14 @@ class Activity
             'height' => 100,
             'opacity' => 100
         );
-        $textDefault = array(
-            'text' => '',
-            'left' => 0,
-            'top' => 0,
-            'fontSize' => 32, //字号
-            'fontColor' => '255,255,255', //字体颜色
-            'angle' => 0,
-        );
+//        $textDefault = array(
+//            'text' => '',
+//            'left' => 0,
+//            'top' => 0,
+//            'fontSize' => 32, //字号
+//            'fontColor' => '255,255,255', //字体颜色
+//            'angle' => 0,
+//        );
         $background = $config['background']; //海报最底层得背景
         //背景方法
         $backgroundInfo = getimagesize($background);
@@ -243,9 +242,12 @@ class Activity
                     $val['left'] = ceil($backgroundWidth - $val['width']) / 2;
                 }
                 $val['top'] = $val['top'] < 0 ? $backgroundHeight - abs($val['top']) - $val['height'] : $val['top'];
+                if(isset($val['type']) && $val['type'] == 1){
+                    $val['left'] = $backgroundWidth-$val['left']-$val['width'];
+                    $val['top'] = $backgroundHeight-$val['top']-$val['height'];
+                }
                 //放置图像
                 imagecopymerge($imageRes, $canvas, $val['left'], $val['top'], $val['right'], $val['bottom'], $val['width'], $val['height'], $val['opacity']); //左，上，右，下，宽度，高度，透明度
-
             }
         }
         //处理文字

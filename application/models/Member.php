@@ -25,7 +25,7 @@ class Member extends Model
         if(empty($user_id)){
             return [];
         }
-        $data = $this->field('id,nickname,money,openid,utype')->where('id',$user_id)->find();
+        $data = $this->field('id,nickname,money,openid,utype,head_img')->where('id',$user_id)->find();
         if($data){
             return $data->toArray();
         }

@@ -47,6 +47,6 @@ class Activity extends \think\Controller
         $act_id = request()->get('act_id');
         $uid = request()->get('uid');
         $data = $activity_model->share($act_id,$uid);
-        return $data;
+        return json($data);
     }
 }
