@@ -51,10 +51,12 @@ class Activity
             $dealer_info = $this->dealer_model->getInfoByIds($dealer_ids,$id);
             $dealer_names = array_column($dealer_info,'name','id');
             $dealer_img = array_column($dealer_info,'cost_img','id');
+            $logo = array_column($dealer_info,'logo','id');
             $act_data = [];
             foreach ($act_details as $k=>$v){
                 $act_details[$k]['dealer_name'] = isset($dealer_names[$v['dealer_id']])?$dealer_names[$v['dealer_id']]:'';
                 $act_details[$k]['dealer_img'] = isset($dealer_img[$v['dealer_id']])?$dealer_img[$v['dealer_id']]:'';
+                $act_details[$k]['dealer_logo'] = isset($logo[$v['dealer_id']])?$logo[$v['dealer_id']]:'';
                 $act_details[$k]['pass_time'] = date('Y-m-d H:i:s',$v['pass_time']);
                 $act_data[$v['dealer_id']][] = $act_details[$k];
             }
