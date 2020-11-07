@@ -1,0 +1,356 @@
+{include file="public/header" /}
+<link rel="stylesheet" type="text/css" href="/static/admin/webupload/webuploader.css">
+<link rel="stylesheet" type="text/css" media="all" href="/sldate/daterangepicker-bs3.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/webupload/style.css">
+<style>
+.file-item{float: left; position: relative; width: 110px;height: 110px; margin: 0 20px 20px 0; padding: 4px;}
+.file-item .info{overflow: hidden;}
+.uploader-list{width: 100%; overflow: hidden;}
+</style>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>添加活动</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" name="edit" id="edit" method="post" action="edit">
+                    <input type="hidden" name="id" value="{$act.id}">
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">主图：</label>
+                            <div class="input-group col-sm-4">
+                                <input type="hidden" id="main_img" name="main_img" value="{$act.main_img}">
+                                <div id="fileList" class="uploader-list" style="float:right"></div>
+                                <div id="imgPicker" style="float:left">选择图片</div>
+                                <img id="img_data" height="100px" style="float:left;margin-left: 50px;margin-top: -10px;" onerror="this.src='/static/admin/images/no_img.jpg'" src="/uploads/images/{$act.main_img}"/>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">海报：</label>
+                            <div class="input-group col-sm-4">
+                                <input type="hidden" id="post_img" name="post_img" value="{$act.post_img}">
+                                <div id="fileLists" class="uploader-list" style="float:right"></div>
+                                <div id="imgPickers" style="float:left">选择图片</div>
+                                <img id="img_datas" height="100px" style="float:left;margin-left: 50px;margin-top: -10px;" onerror="this.src='/static/admin/images/no_img.jpg'" src="/uploads/images/{$act.post_img}"/>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">客服二维码：</label>
+                            <div class="input-group col-sm-4">
+                                <input type="hidden" id="server_code" name="server_code" value="{$act.server_code}">
+                                <div id="fileListss" class="uploader-list" style="float:right"></div>
+                                <div id="imgPickerss" style="float:left">选择图片</div>
+                                <img id="img_datass" height="100px" style="float:left;margin-left: 50px;margin-top: -10px;" onerror="this.src='/static/admin/images/no_img.jpg'" src="/uploads/images/{$act.server_code}"/>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">活动名称：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="title" type="text" class="form-control" name="title" value="{$act.title}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">副标题：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="sub_title" type="text" class="form-control" name="sub_title" value="{$act.sub_title}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">购买价格：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="price" type="text" class="form-control" name="price" value="{$act.price}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">用户佣金：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="user_brokerage" type="text" class="form-control" name="user_brokerage" value="{$act.user_brokerage}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">商品数量：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="num" type="text" class="form-control" name="num" value="{$act.num}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">虚拟购买量：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="vi_buy_num" type="text" class="form-control" name="vi_buy_num" value="{$act.vi_buy_num}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">虚拟浏览量：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="vi_uv" type="text" class="form-control" name="vi_uv" value="{$act.vi_uv}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">虚拟参与数：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="vi_jion_num" type="text" class="form-control" name="vi_jion_num" value="{$act.vi_jion_num}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">虚拟分享数：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="vi_share_num" type="text" class="form-control" name="vi_share_num" value="{$act.vi_share_num}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">分享方式：</label>
+                            <div class="input-group col-sm-4">
+                                <div class="radio i-checks">
+                                    {if condition="$act['share_type'] eq 1 "}
+                                    <input type="radio" name='share_type' value="1" checked="checked" />购买后&nbsp;&nbsp;
+                                    <input type="radio" name='share_type' value="2" />人人分享
+                                    {else/}
+                                    <input type="radio" name='share_type' value="1" />购买后&nbsp;&nbsp;
+                                    <input type="radio" name='share_type' value="2" checked="checked" />人人分享
+                                    {/if}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">商户UID：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="uid" type="text" class="form-control" name="uid" value="{$act.uid}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">商户名：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="name" type="text" class="form-control" name="name" value="{$act.name}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">商户地址：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="sit" type="text" class="form-control" name="sit" value="{$act.sit}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">营业时间：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="do_time" type="text" class="form-control" name="do_time" value="{$act.do_time}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">成本价：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="cost" type="text" class="form-control" name="cost" value="{$act.cost}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">商户电话：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="phone" type="text" class="form-control" name="phone" value="{$act.phone}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">核销密码：</label>
+                            <div class="input-group col-sm-4">
+                                <input id="cancel_pass" type="text" class="form-control" name="cancel_pass" value="{$act.cancel_pass}">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">开始-结束时间：</label>
+                            <div class="input-group col-sm-4">
+<!--                                <input id="start_time" type="text" class="form-control" name="keyword" value="{$act.keyword}">-->
+                                <input type="text" class="form-control sl-date" name="reservation" id="reservation" value="" placeholder="点击选择日期范围"/>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>                          
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label " for="myEditor">活动介绍：</label>
+                            <div class="input-group col-sm-9">
+                                <script src="/static/admin/ueditor/ueditor.config.js" type="text/javascript"></script>
+                                <script src="/static/admin/ueditor/ueditor.all.js" type="text/javascript"></script>
+                                <textarea name="content" style="width:90%" id="myEditor">{$act.content}</textarea>
+                                <script type="text/javascript">
+                                    var editor = new UE.ui.Editor();
+                                    editor.render("myEditor");
+                                </script>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-3">
+                                <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> 保存</button>&nbsp;&nbsp;&nbsp;
+                                <a class="btn btn-danger" href="javascript:history.go(-1);"><i class="fa fa-close"></i> 返回</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+  {include file="public/footer" /}
+<script type="text/javascript" src="/sldate/moment.js"></script>
+<script type="text/javascript" src="/sldate/daterangepicker.js"></script>
+<script type="text/javascript" src="/static/admin/webupload/webuploader.min.js"></script>
+
+<script type="text/javascript">
+
+    var $list = $('#fileList');
+    //上传图片,初始化WebUploader
+    var uploader = WebUploader.create({
+     
+        auto: true,// 选完文件后，是否自动上传。   
+        swf: '/static/admin/js/webupload/Uploader.swf',// swf文件路径 
+        server: "{:url('Upload/upload')}",// 文件接收服务端。
+        duplicate :true,// 重复上传图片，true为可重复false为不可重复
+        pick: '#imgPicker',// 选择文件的按钮。可选。
+
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/jpg,image/jpeg,image/png'
+        },
+
+        'onUploadSuccess': function(file, data, response) {
+            $("#main_img").val(data._raw);
+            $("#img_data").attr('src', '/uploads/images/' + data._raw).show();
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    var $list = $('#fileLists');
+    //上传图片,初始化WebUploader
+    var uploader = WebUploader.create({
+
+        auto: true,// 选完文件后，是否自动上传。
+        swf: '/static/admin/js/webupload/Uploader.swf',// swf文件路径
+        server: "{:url('Upload/upload')}",// 文件接收服务端。
+        duplicate :true,// 重复上传图片，true为可重复false为不可重复
+        pick: '#imgPickers',// 选择文件的按钮。可选。
+
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/jpg,image/jpeg,image/png'
+        },
+
+        'onUploadSuccess': function(file, data, response) {
+            $("#post_img").val(data._raw);
+            $("#img_datas").attr('src', '/uploads/images/' + data._raw).show();
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    var $list = $('#fileListss');
+    //上传图片,初始化WebUploader
+    var uploader = WebUploader.create({
+
+        auto: true,// 选完文件后，是否自动上传。
+        swf: '/static/admin/js/webupload/Uploader.swf',// swf文件路径
+        server: "{:url('Upload/upload')}",// 文件接收服务端。
+        duplicate :true,// 重复上传图片，true为可重复false为不可重复
+        pick: '#imgPickerss',// 选择文件的按钮。可选。
+
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/jpg,image/jpeg,image/png'
+        },
+
+        'onUploadSuccess': function(file, data, response) {
+            $("#server_code").val(data._raw);
+            $("#img_datass").attr('src', '/uploads/images/' + data._raw).show();
+        }
+    });
+
+</script>
+<script type="text/javascript">
+
+    $(function(){
+        $('#reservation').daterangepicker(null, function(start, end, label) {});
+
+        $('#edit').ajaxForm({
+            beforeSubmit: checkForm, // 此方法主要是提交前执行的方法，根据需要设置
+            success: complete, // 这是提交后的方法
+            dataType: 'json'
+        });
+
+        function checkForm(){
+            if( '' == $.trim($('#title').val())){
+                layer.msg('标题不能为空', {icon: 5,time:1500,shade: 0.1}, function(index){
+                    layer.close(index);
+                });
+                return false;
+            }
+
+     }
+
+        function complete(data){
+            if(data.code == 1){
+                layer.msg(data.msg, {icon: 6,time:1500,shade: 0.1}, function(index){
+                    layer.close(index);
+                    window.location.href="{:url('article/index')}";
+                });
+            }else{
+                layer.msg(data.msg, {icon: 5,time:1500,shade: 0.1}, function(index){
+                    layer.close(index);
+                });
+                return false;
+            }
+        }
+
+    });
+
+
+    //IOS开关样式配置
+   var elem = document.querySelector('.js-switch');
+        var switchery = new Switchery(elem, {
+            color: '#1AB394'
+        });
+    var config = {
+        '.chosen-select': {},                    
+    }
+    for (var selector in config) {
+        $(selector).chosen(config[selector]);
+    }
+
+
+
+</script>
+</body>
+</html>

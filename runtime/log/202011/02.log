@@ -1,6 +1,1418 @@
-[ 2020-11-02T10:15:18+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/index/index.html
-[ log ] www.yylm.com/otadmins/index/index.html [运行时间：0.046970s][吞吐率：21.29req/s] [内存消耗：2,748.16kb] [文件加载：51]
-[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ 2020-11-02T16:15:26+08:00 ] 127.0.0.1 127.0.0.1 GET /otcms
+[ log ] yylm.com/otcms [运行时间：0.019016s][吞吐率：52.59req/s] [内存消耗：918.09kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otcms',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:15:26+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.018148s][吞吐率：55.10req/s] [内存消耗：1,370.54kb] [文件加载：32]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:15:27+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.011293s][吞吐率：88.55req/s] [内存消耗：917.55kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:15:27+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015467s][吞吐率：64.65req/s] [内存消耗：1,241.92kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:15:32+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/otcms
+[ log ] yylm.com/index.php/otcms [运行时间：0.009986s][吞吐率：100.14req/s] [内存消耗：909.41kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otcms',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:15:32+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015439s][吞吐率：64.77req/s] [内存消耗：1,242.31kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:15:32+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.010206s][吞吐率：97.98req/s] [内存消耗：917.55kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:15:32+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015949s][吞吐率：62.70req/s] [内存消耗：1,241.92kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:16:26+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php
+[ log ] yylm.com/index.php [运行时间：0.016197s][吞吐率：61.74req/s] [内存消耗：1,231.02kb] [文件加载：29]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:16:26+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.011860s][吞吐率：84.32req/s] [内存消耗：917.58kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/index.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:16:26+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.016479s][吞吐率：60.68req/s] [内存消耗：1,241.95kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/index.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:16:39+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/otcms
+[ log ] yylm.com/index.php/otcms [运行时间：0.011668s][吞吐率：85.70req/s] [内存消耗：908.98kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otcms',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:16:39+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.016589s][吞吐率：60.28req/s] [内存消耗：1,242.07kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:16:39+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.009992s][吞吐率：100.08req/s] [内存消耗：916.88kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'image/webp,*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php
+[ log ] yylm.com/index.php [运行时间：0.019562s][吞吐率：51.12req/s] [内存消耗：1,231.03kb] [文件加载：29]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:09+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.010226s][吞吐率：97.79req/s] [内存消耗：917.91kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/index.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:09+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.016077s][吞吐率：62.20req/s] [内存消耗：1,242.27kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/index.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:09+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php
+[ log ] yylm.com/index.php [运行时间：0.015301s][吞吐率：65.36req/s] [内存消耗：1,231.03kb] [文件加载：29]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:09+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.010066s][吞吐率：99.34req/s] [内存消耗：917.91kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/index.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:09+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015761s][吞吐率：63.45req/s] [内存消耗：1,242.27kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/index.php',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:13+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/otcms
+[ log ] yylm.com/index.php/otcms [运行时间：0.012821s][吞吐率：78.00req/s] [内存消耗：909.23kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otcms',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:13+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015559s][吞吐率：64.27req/s] [内存消耗：1,242.31kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:13+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.010166s][吞吐率：98.37req/s] [内存消耗：917.37kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:13+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015417s][吞吐率：64.86req/s] [内存消耗：1,241.73kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:16+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015978s][吞吐率：62.59req/s] [内存消耗：1,242.52kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:16+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.010183s][吞吐率：98.20req/s] [内存消耗：917.88kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:16+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015742s][吞吐率：63.53req/s] [内存消耗：1,242.25kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:16+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015720s][吞吐率：63.61req/s] [内存消耗：1,242.52kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:16+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.009971s][吞吐率：100.29req/s] [内存消耗：917.88kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:16+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015502s][吞吐率：64.51req/s] [内存消耗：1,242.25kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:17+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015556s][吞吐率：64.28req/s] [内存消耗：1,242.52kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:17+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.010435s][吞吐率：95.83req/s] [内存消耗：917.88kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:17+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015532s][吞吐率：64.38req/s] [内存消耗：1,242.25kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'cache-control' => 'no-cache',
+  'pragma' => 'no-cache',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:22+08:00 ] 127.0.0.1 127.0.0.1 GET /otcms
+[ log ] yylm.com/otcms [运行时间：0.010273s][吞吐率：97.34req/s] [内存消耗：917.68kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otcms',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:22+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015669s][吞吐率：63.82req/s] [内存消耗：1,242.13kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:23+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.009381s][吞吐率：106.60req/s] [内存消耗：917.37kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:23+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015267s][吞吐率：65.50req/s] [内存消耗：1,241.73kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/error',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:30+08:00 ] 127.0.0.1 127.0.0.1 GET /otcms
+[ log ] yylm.com/otcms [运行时间：0.010971s][吞吐率：91.15req/s] [内存消耗：917.87kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otcms',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:30+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.017318s][吞吐率：57.74req/s] [内存消耗：1,242.31kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'purpose' => 'prefetch',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:32+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins
+[ log ] yylm.com/otadmins [运行时间：0.236465s][吞吐率：4.23req/s] [内存消耗：1,335.77kb] [文件加载：36]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:32+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/login/index.html
+[ log ] yylm.com/otadmins/login/index.html [运行时间：0.022665s][吞吐率：44.12req/s] [内存消耗：1,478.30kb] [文件加载：36]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\otadmins\controller\Login->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\otadmins\controller\Login.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/otadmins\view\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:32+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/login/checkverify.html
+[ log ] yylm.com/otadmins/login/checkverify.html [运行时间：0.439664s][吞吐率：2.27req/s] [内存消耗：1,333.80kb] [文件加载：33]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'login',
+    2 => 'checkverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/otadmins/login/index.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\otadmins\controller\Login->checkVerify[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\otadmins\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:32+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.010536s][吞吐率：94.91req/s] [内存消耗：917.84kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/otadmins/login/index.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:33+08:00 ] 127.0.0.1 127.0.0.1 GET /Otadmins/login/getverify/t/1604305112.html
+[ log ] yylm.com/Otadmins/login/getverify/t/1604305112.html [运行时间：0.297598s][吞吐率：3.36req/s] [内存消耗：1,321.23kb] [文件加载：33]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Otadmins',
+    1 => 'login',
+    2 => 'getverify',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/otadmins/login/index.html',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  't' => '1604305112',
+)
+[ info ] [ RUN ] app\otadmins\controller\Login->getVerify[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\otadmins\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:49+08:00 ] 127.0.0.1 127.0.0.1 POST /otadmins/login/dologin.html
+[ log ] yylm.com/otadmins/login/dologin.html [运行时间：0.162890s][吞吐率：6.14req/s] [内存消耗：2,691.32kb] [文件加载：49]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'login',
+    2 => 'dologin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/otadmins/login/index.html',
+  'origin' => 'http://yylm.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '45',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admins',
+  'password' => 'admins8778',
+  'code' => '0220',
+)
+[ info ] [ RUN ] app\otadmins\controller\Login->doLogin[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\otadmins\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037678s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_admin` [ RunTime:0.009202s ]
+[ sql ] [ SQL ] SELECT * FROM `think_admin` WHERE  `username` = 'admins' LIMIT 1 [ RunTime:0.010291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_group` [ RunTime:0.002123s ]
+[ sql ] [ SQL ] SELECT * FROM `think_auth_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.004251s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.002886s ]
+[ sql ] [ SQL ] SELECT `name` FROM `think_auth_rule` [ RunTime:0.003262s ]
+[ sql ] [ SQL ] UPDATE `think_admin`  SET `loginnum`=249,`last_login_ip`='127.0.0.1',`last_login_time`=1604305129  WHERE  `id` = 1 [ RunTime:0.033062s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_log` [ RunTime:0.001814s ]
+[ sql ] [ SQL ] INSERT INTO `think_log` (`admin_id` , `admin_name` , `description` , `status` , `ip` , `add_time`) VALUES (1 , 'admins' , '用户【admins】登录成功' , 1 , '127.0.0.1' , 1604305129) [ RunTime:0.015478s ]
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:51+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/index/index.html
+[ log ] yylm.com/otadmins/index/index.html [运行时间：0.077094s][吞吐率：12.97req/s] [内存消耗：2,755.41kb] [文件加载：51]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -11,16 +1423,15 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://www.yylm.com/otadmins/login/index.html',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'referer' => 'http://yylm.com/otadmins/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
   'upgrade-insecure-requests' => '1',
-  'cache-control' => 'max-age=0',
   'connection' => 'keep-alive',
-  'host' => 'www.yylm.com',
+  'host' => 'yylm.com',
   'content-length' => '',
   'content-type' => '',
 )
@@ -35,80 +1446,24 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ CACHE ] INIT file
-[ info ] [ RUN ] app\otadmins\controller\Index->index[ E:\NewProgram\yylm\application\otadmins\controller\Index.php ]
-[ info ] [ VIEW ] E:\NewProgram\yylm/application/otadmins\view\index.html [ array (
+[ info ] [ RUN ] app\otadmins\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\otadmins\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/otadmins\view\index.html [ array (
   0 => 'username',
   1 => 'portrait',
   2 => 'rolename',
   3 => 'menu',
 ) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.011185s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.002666s ]
-[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.000578s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_config` [ RunTime:0.002365s ]
-[ sql ] [ SQL ] SELECT `type`,`name`,`value` FROM `think_config` WHERE  `status` = 1 [ RunTime:0.000800s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015446s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.009554s ]
+[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.004360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_config` [ RunTime:0.006179s ]
+[ sql ] [ SQL ] SELECT `type`,`name`,`value` FROM `think_config` WHERE  `status` = 1 [ RunTime:0.003298s ]
 
 ---------------------------------------------------------------
-[ 2020-11-02T10:15:18+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/index/indexpage.html
-[ log ] www.yylm.com/otadmins/index/indexpage.html [运行时间：0.077842s][吞吐率：12.85req/s] [内存消耗：2,745.79kb] [文件加载：50]
-[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'otadmins',
-    1 => 'index',
-    2 => 'indexpage',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
-  'accept-language' => 'zh-CN,zh;q=0.9',
-  'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
-  'connection' => 'keep-alive',
-  'host' => 'www.yylm.com',
-  'content-length' => '',
-  'content-type' => '',
-)
-[ info ] [ PARAM ] array (
-)
-[ info ] [ SESSION ] INIT array (
-  'id' => '',
-  'var_session_id' => '',
-  'prefix' => 'think',
-  'type' => '',
-  'auto_start' => true,
-)
-[ info ] [ DB ] INIT mysql
-[ info ] [ CACHE ] INIT file
-[ info ] [ RUN ] app\otadmins\controller\Index->indexPage[ E:\NewProgram\yylm\application\otadmins\controller\Index.php ]
-[ info ] [ VIEW ] E:\NewProgram\yylm/application/otadmins\view\index\index.html [ array (
-  0 => 'username',
-  1 => 'portrait',
-  2 => 'rolename',
-  3 => 'menu',
-  4 => 'info',
-  5 => 'article_list',
-  6 => 'log_list',
-) ]
-[ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.011738s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.002324s ]
-[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.001127s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_article` [ RunTime:0.003117s ]
-[ sql ] [ SQL ] SELECT * FROM `think_article` ORDER BY views desc LIMIT 5 [ RunTime:0.001434s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_log` [ RunTime:0.001795s ]
-[ sql ] [ SQL ] SELECT * FROM `think_log` ORDER BY log_id desc LIMIT 10 [ RunTime:0.001472s ]
-
----------------------------------------------------------------
-[ 2020-11-02T10:15:18+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/js/layer/skin/extend/layer.ext.js,skin/moon/style.css
-[ log ] www.yylm.com/static/admin/js/layer/skin/extend/layer.ext.js,skin/moon/style.css [运行时间：0.007811s][吞吐率：128.02req/s] [内存消耗：911.64kb] [文件加载：20]
-[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ 2020-11-02T16:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/admin/js/layer/skin/extend/layer.ext.js,skin/moon/style.css
+[ log ] yylm.com/static/admin/js/layer/skin/extend/layer.ext.js,skin/moon/style.css [运行时间：0.011105s][吞吐率：90.05req/s] [内存消耗：918.46kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -119,14 +1474,14 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
+  'referer' => 'http://yylm.com/otadmins/index/index.html',
   'accept' => 'text/css,*/*;q=0.1',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
   'connection' => 'keep-alive',
-  'host' => 'www.yylm.com',
+  'host' => 'yylm.com',
   'content-length' => '',
   'content-type' => '',
 )
@@ -138,9 +1493,65 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
-[ 2020-11-02T10:15:19+08:00 ] 127.0.0.1 127.0.0.1 GET /error
-[ log ] www.yylm.com/error [运行时间：0.024118s][吞吐率：41.46req/s] [内存消耗：1,362.51kb] [文件加载：32]
-[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ 2020-11-02T16:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/index/indexpage.html
+[ log ] yylm.com/otadmins/index/indexpage.html [运行时间：0.089349s][吞吐率：11.19req/s] [内存消耗：2,754.41kb] [文件加载：50]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otadmins',
+    1 => 'index',
+    2 => 'indexpage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yylm.com/otadmins/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yylm.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT file
+[ info ] [ RUN ] app\otadmins\controller\Index->indexPage[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\otadmins\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/otadmins\view\index\index.html [ array (
+  0 => 'username',
+  1 => 'portrait',
+  2 => 'rolename',
+  3 => 'menu',
+  4 => 'info',
+  5 => 'article_list',
+  6 => 'log_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012565s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.007809s ]
+[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.004581s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_article` [ RunTime:0.006981s ]
+[ sql ] [ SQL ] SELECT * FROM `think_article` ORDER BY views desc LIMIT 5 [ RunTime:0.007264s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_log` [ RunTime:0.004148s ]
+[ sql ] [ SQL ] SELECT * FROM `think_log` ORDER BY log_id desc LIMIT 10 [ RunTime:0.008326s ]
+
+---------------------------------------------------------------
+[ 2020-11-02T16:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015859s][吞吐率：63.06req/s] [内存消耗：1,242.12kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
@@ -151,126 +1562,84 @@
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj',
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
+  'referer' => 'http://yylm.com/otadmins/index/index.html',
   'accept' => 'text/css,*/*;q=0.1',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
   'connection' => 'keep-alive',
-  'host' => 'www.yylm.com',
+  'host' => 'yylm.com',
   'content-length' => '',
   'content-type' => '',
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ RUN ] app\error\controller\Index->index[ E:\NewProgram\yylm\application\error\controller\Index.php ]
-[ info ] [ VIEW ] E:\NewProgram\yylm/application/error\view\Public\404.html [ array (
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
 ) ]
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
-[ 2020-11-02T10:15:25+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/user/index.html
-[ log ] www.yylm.com/otadmins/user/index.html [运行时间：0.070856s][吞吐率：14.11req/s] [内存消耗：2,741.77kb] [文件加载：51]
-[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ 2020-11-02T16:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ log ] yylm.com/favicon.ico [运行时间：0.009628s][吞吐率：103.86req/s] [内存消耗：918.44kb] [文件加载：20]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
-    0 => 'otadmins',
-    1 => 'user',
-    2 => 'index',
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj; UM_distinctid=17586bcc3299ea-02a77369050625-f313f6d-1fa400-17586bcc32ab65; CNZZDATA1253472858=1310914591-1604280899-http%253A%252F%252Fwww.yylm.com%252F%7C1604280899',
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo; UM_distinctid=17588099a41a96-0d3a7bde88e909-f7b1332-1fa400-17588099a42a53; CNZZDATA1253472858=1784193208-1604303635-http%253A%252F%252Fyylm.com%252F%7C1604303635',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://www.yylm.com/otadmins/index/index.html',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
-  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://yylm.com/otadmins/index/index.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
   'connection' => 'keep-alive',
-  'host' => 'www.yylm.com',
+  'host' => 'yylm.com',
   'content-length' => '',
   'content-type' => '',
 )
 [ info ] [ PARAM ] array (
 )
-[ info ] [ SESSION ] INIT array (
-  'id' => '',
-  'var_session_id' => '',
-  'prefix' => 'think',
-  'type' => '',
-  'auto_start' => true,
-)
-[ info ] [ DB ] INIT mysql
-[ info ] [ CACHE ] INIT file
-[ info ] [ RUN ] app\otadmins\controller\User->index[ E:\NewProgram\yylm\application\otadmins\controller\User.php ]
-[ info ] [ VIEW ] E:\NewProgram\yylm/application/otadmins\view\user\index.html [ array (
-  0 => 'username',
-  1 => 'portrait',
-  2 => 'rolename',
-  3 => 'menu',
-  4 => 'Nowpage',
-  5 => 'allpage',
-  6 => 'val',
-) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000999s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.002404s ]
-[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.001205s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_admin` [ RunTime:0.001538s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_admin` LIMIT 1 [ RunTime:0.037164s ]
-[ sql ] [ SQL ] SELECT `think_admin`.*,`title` FROM `think_admin` INNER JOIN `think_auth_group` `think_auth_group` ON `think_admin`.`groupid`=`think_auth_group`.`id` ORDER BY id desc LIMIT 0,10 [ RunTime:0.001201s ]
 
 ---------------------------------------------------------------
-[ 2020-11-02T10:15:25+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/user/index.html?page=1&key=
-[ log ] www.yylm.com/otadmins/user/index.html?page=1&key= [运行时间：0.046486s][吞吐率：21.51req/s] [内存消耗：2,587.30kb] [文件加载：49]
-[ info ] [ LANG ] E:\NewProgram\yylm\thinkphp\lang\zh-cn.php
+[ 2020-11-02T16:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /error
+[ log ] yylm.com/error [运行时间：0.015352s][吞吐率：65.14req/s] [内存消耗：1,242.80kb] [文件加载：30]
+[ info ] [ LANG ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
   'module' => 
   array (
-    0 => 'otadmins',
-    1 => 'user',
-    2 => 'index',
+    0 => 'error',
+    1 => NULL,
+    2 => NULL,
   ),
 )
 [ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=2f9vtju6d368e0tkd5jmg4g3lj; UM_distinctid=17586bcc3299ea-02a77369050625-f313f6d-1fa400-17586bcc32ab65; CNZZDATA1253472858=1310914591-1604280899-http%253A%252F%252Fwww.yylm.com%252F%7C1604280899',
+  'cookie' => 'PHPSESSID=nu5lpm99v2cnefemgt663sbugo; UM_distinctid=17588099a41a96-0d3a7bde88e909-f7b1332-1fa400-17588099a42a53; CNZZDATA1253472858=1784193208-1604303635-http%253A%252F%252Fyylm.com%252F%7C1604303635',
   'accept-language' => 'zh-CN,zh;q=0.9',
   'accept-encoding' => 'gzip, deflate',
-  'referer' => 'http://www.yylm.com/otadmins/user/index.html',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
-  'x-requested-with' => 'XMLHttpRequest',
-  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'referer' => 'http://yylm.com/otadmins/index/index.html',
+  'accept' => 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36',
   'connection' => 'keep-alive',
-  'host' => 'www.yylm.com',
+  'host' => 'yylm.com',
   'content-length' => '',
   'content-type' => '',
 )
 [ info ] [ PARAM ] array (
-  'page' => '1',
-  'key' => '',
 )
-[ info ] [ SESSION ] INIT array (
-  'id' => '',
-  'var_session_id' => '',
-  'prefix' => 'think',
-  'type' => '',
-  'auto_start' => true,
-)
-[ info ] [ DB ] INIT mysql
-[ info ] [ CACHE ] INIT file
-[ info ] [ RUN ] app\otadmins\controller\User->index[ E:\NewProgram\yylm\application\otadmins\controller\User.php ]
+[ info ] [ RUN ] app\error\controller\Index->index[ F:\PhpStudy\phpstudy_pro\WWW\yylm.com\application\error\controller\Index.php ]
+[ info ] [ VIEW ] F:\PhpStudy\phpstudy_pro\WWW\yylm.com/application/error\view\Public\404.html [ array (
+) ]
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.011081s ] mysql:dbname=yylm_hiyll_com;host=192.168.0.7;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_auth_rule` [ RunTime:0.008437s ]
-[ sql ] [ SQL ] SELECT * FROM `think_auth_rule` WHERE  (  status = 1 ) ORDER BY `sort` [ RunTime:0.000913s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `think_admin` [ RunTime:0.001601s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `think_admin` LIMIT 1 [ RunTime:0.000681s ]
-[ sql ] [ SQL ] SELECT `think_admin`.*,`title` FROM `think_admin` INNER JOIN `think_auth_group` `think_auth_group` ON `think_admin`.`groupid`=`think_auth_group`.`id` ORDER BY id desc LIMIT 0,10 [ RunTime:0.000673s ]
 
 ---------------------------------------------------------------
 [ 2020-11-02T10:27:07+08:00 ] 127.0.0.1 127.0.0.1 GET /otadmins/data/index.html
