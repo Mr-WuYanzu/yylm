@@ -6,13 +6,13 @@ namespace app\client\controller;
 
 use think\Controller;
 
-class Buy extends Controller
+class Buy extends Base
 {
     public function pay(){
-        $id = request()->get('id');#活动id
-        $phone = request()->get('phone');
-        $marks = request()->get('marks');
-        $share_id = request()->get('share_id');
+        $id = request()->post('id');#活动id
+        $phone = request()->post('phone');
+        $marks = request()->post('marks');
+        $share_id = request()->post('share_id');
         $uid = 1;
         $openid = 1;
         $buy_model = new \app\client\model\Buy();

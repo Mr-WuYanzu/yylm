@@ -3,7 +3,7 @@ namespace app\client\controller;
 
 use app\models\Order;
 
-class Activity extends \think\Controller
+class Activity extends Base
 {
     /*
      * 活动列表

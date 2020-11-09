@@ -17,4 +17,8 @@ class Redis
     public function get($key){
        return self::$redis->get($key);
     }
+
+    public function set($key,$value,$expire){
+        self::$redis->set($key,$value,$expire);
+    }
 }
