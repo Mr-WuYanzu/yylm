@@ -13,21 +13,11 @@ class Buy extends Base
         $phone = request()->post('phone');
         $marks = request()->post('marks');
         $share_id = request()->post('share_id');
-        $uid = 1;
-        $openid = 1;
+        $uid = $this->uid;
+        $openid = $this->openid;
         $buy_model = new \app\client\model\Buy();
         $res = $buy_model->pay($id,$phone,$uid,$marks,$share_id,$openid);
         return json($res);
-    }
-
-    public function payNotify(){
-        $data=file_get_contents('php://input');
-        $data = json_decode(json_encode(simplexml_load_string($data, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
-        $buy_model = new \app\client\model\Buy();
-        $res = $buy_model->payNotify($data);
-        if($res === true){
-            echo 'success';
-        }
     }
 
     /*
@@ -37,7 +27,7 @@ class Buy extends Base
         $act_id = request()->post('act_id');
         $pro_id = request()->post('pro_id');
         $pwd = request()->post('pwd');
-        $uid = 1;
+        $uid = $this->uid;
         $buy_model = new \app\client\model\Buy();
         $res = $buy_model->cancel($act_id,$pro_id,$uid,$pwd);
         return json($res);

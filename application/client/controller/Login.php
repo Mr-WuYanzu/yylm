@@ -58,11 +58,15 @@ class Login extends Controller
         $user_model = new Member();
         #根据用户openid获取用户信息
         $user_info = $user_model->getInfoByOpenid($data['openid']);
+        $redis_model = new Redis();
         if($user_info){
             $data['login_num'] = $user_info['login_num']+1;
             $data['update_time'] = time();
             $user_model->upd($user_info['id'],$data);
-            $state .= '&token='.md5($data['token'].'_'.$user_info['id']);
+            $token = md5($data['token'].'_'.$user_info['id']);
+            $state .= '&token='.$token;
+            $data['uid'] = $user_info['id'];
+            $redis_model->set($token,json_encode($data));
             header("Refresh:0;url=".$state);
         }else{
             $data['create_time'] = time();
@@ -71,7 +75,8 @@ class Login extends Controller
             $uid = $user_model->add($data);
             if($uid){
                 $token = md5($data['token'].'_'.$uid);
-                Redis::$redis->set();
+                $data['uid'] = $uid;
+                $redis_model->set($token,json_encode($data));
                 $state .= '&token='.$token;
                 header("Refresh:0;url=".$state);
             }else{

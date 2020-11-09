@@ -109,7 +109,7 @@ class Buy
             if(!$res){
                 throw new Exception('订单详情创建失败');
             }
-            $data = $this->wx_pay_model->wxPay($order_unique,$act_info['price'],'活动抢购','','JSAPI','',$openid);
+            $data = $this->wx_pay_model->wxPay($order_unique,$act_info['price'],'活动抢购','https://yylm.hiyll.com/client/pay/payNotify','JSAPI','',$openid);
             if($data['code'] == 1000){
                 throw new Exception('支付请求失败');
             }

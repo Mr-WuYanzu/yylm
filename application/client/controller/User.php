@@ -16,7 +16,7 @@ class User extends Base
      */
     public function complain(){
         $data = [
-            'uid' => 1,
+            'uid' => $this->uid,
             'act_id' => request()->post('act_id'),
             'admin_id' => request()->post('admin_id'),
             'cont_id' => request()->post('cont_id'),
