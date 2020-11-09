@@ -35,6 +35,8 @@ class Activity
         }
         $data = $this->activity_model->getInfo($id);
         if(!empty($data)){
+            #访问次数+1
+            $this->activity_model->addClickNum($id);
             $data['visit_num'] = intval($data['vi_uv'])+intval($data['click_num']);     #访问数
             $data['share_num'] = intval($data['vi_share_num'])+intval($data['share_num']);      #分享数
             $data['buy_num']  = intval($data['vi_buy_num'])+intval($data['buy_num']);       #报名数
@@ -116,6 +118,8 @@ class Activity
         }
         #生成成功返回前端图片路径
         if($res['code'] == 200){
+            #增加一次分享次数
+            $this->activity_model->addShareNum($act_id);
             return respond('200','成功',$img_url.'/'.$res['data']['key']);
         }else{
             return respond('1000','失败');

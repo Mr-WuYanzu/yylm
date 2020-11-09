@@ -50,4 +50,43 @@ class Activity extends Model
         }
         return [];
     }
+
+    /*
+     * 分享数+1
+     */
+    public function addShareNum($act_id){
+        if(empty($act_id)){
+            return false;
+        }
+        $where = [
+            'id' => $act_id
+        ];
+        return $this->where($where)->inc('share_num',1)->update();
+    }
+
+    /*
+ * 点击数+1
+ */
+    public function addClickNum($act_id){
+        if(empty($act_id)){
+            return false;
+        }
+        $where = [
+            'id' => $act_id
+        ];
+        return $this->where($where)->inc('click_num',1)->update();
+    }
+
+    /*
+ * 购买数+1
+ */
+    public function addBuyNum($act_id){
+        if(empty($act_id)){
+            return false;
+        }
+        $where = [
+            'id' => $act_id
+        ];
+        return $this->where($where)->inc('buy_num',1)->update();
+    }
 }

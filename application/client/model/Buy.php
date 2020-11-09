@@ -214,10 +214,11 @@ class Buy
                     if(!$res){
                         throw new Exception('处理订单失败');
                     }
+                    #修改购买次数
+                    $this->activity_model->addBuyNum($order_info['act_id']);
                     $this->order_model->commit();
                     return true;
                 }catch (Exception $exception){
-                    var_dump($exception->getMessage());exit;
                     $this->order_model->rollback();
                     return false;
                 }

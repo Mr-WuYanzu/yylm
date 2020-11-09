@@ -11,13 +11,13 @@ use think\Controller;
 
 class User extends Controller
 {
-    protected $redirect_url = '';
+    protected $redirect_url = 'https://yylm.hiyll.com/client/user/authRedirect';
 
     /*
      * 网页授权登录
      */
     public function login(){
-        $url = 'https://tenant.hiyll.com/h5/index.html#/';
+        $url = 'https://yylm.hiyll.com/h5/index.html#/';
         $refer_url = request()->get('refer_url')?:'';
         $refer_url = $url.$refer_url;
         $http_referer = base64_encode($refer_url);
